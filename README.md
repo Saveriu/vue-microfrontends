@@ -1,6 +1,6 @@
 # vue-micro-frontend
 
-cd /app1
+cd app1
 
 npm run lib
 
