@@ -1,9 +1,14 @@
-import externalComponent from '@/utils';
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router"; 
 import Home from "../views/Home.vue";
+import GenericWrapper from "@/views/GenericWrapper";
 
 Vue.use(VueRouter);
+
+function getArtifactsURIs(jobId: string): string[] {
+  //load from store
+  return ["/artifacts/1234","/artifacts/5678"];
+}
 
 const routes: Array<RouteConfig> = [ 
   {
@@ -12,13 +17,13 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
-    props: {
-      name:"titi"
-    },
-    component: () =>
-      externalComponent("/app1/micro-app1.umd.js")
+    path: "/apps/:appId",
+    name: "App",
+    props: route => ({
+      artifactsURIs: getArtifactsURIs("titi"),
+      microAppId : route.params.appId
+    }),
+    component: GenericWrapper
   }
 ];
 

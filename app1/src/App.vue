@@ -1,11 +1,16 @@
 <template>
-  <h2>Ich bin App1 with props: {{ name }}</h2>
+  <main id="app">
+    <h2>Ich bin App1 with artifacts: {{ artifactURIs }}</h2>
+    <app-1-component></app-1-component>
+  </main>
 </template>
 
 <script>
+import App1Component from './components/App1Component.vue';
 export default {
+  components: { App1Component },
   props: {
-    name: String,
+    artifactURIs: Array,
   },
 };
 </script>
@@ -18,6 +23,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 400px;
+  border: 1px solid #2c3e50;
 }
 
 #nav {

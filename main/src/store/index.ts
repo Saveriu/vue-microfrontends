@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    microApps: ["micro-app1","micro-app2"]
+    microApps: ["micro-app1", "micro-app2"]
   },
   mutations: {},
   actions: {},
