@@ -7,5 +7,14 @@ export default new Vuex.Store({
   state: {},
   mutations: {},
   actions: {},
-  modules: {}
+  modules: {
+    app1: {
+      namespaced: true,
+      state: {
+        artifactsIDs: ["FIRST"]
+      },
+      mutations: {},
+      actions: {},
+    }
+  }
 });

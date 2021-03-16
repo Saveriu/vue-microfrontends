@@ -1,16 +1,37 @@
 <template>
-  <main id="app">
+  <main id="app1">
     <h2>Ich bin App1 with artifacts: {{ artifactURIs }}</h2>
+    <h3>Store Global : {{ stateData }}</h3>
+    <h3>Store Module : {{ moduleData }}</h3>
     <app-1-component></app-1-component>
   </main>
 </template>
 
 <script>
-import App1Component from './components/App1Component.vue';
+import App1Component from "./components/App1Component.vue";
+// import store from "./store";
+
 export default {
   components: { App1Component },
   props: {
     artifactURIs: Array,
+  },
+  computed: {
+    stateData() {
+      return this.$store.state;
+    },
+    moduleData() {
+      return this.$store.state.app1;
+    },
+  },
+  async beforeCreate() {
+    console.debug("Loading micro-app1");
+    this.$store.registerModule("app1", {
+      namespaced: true,
+      state: { titi: true },
+      mutations: {},
+      action: {},
+    });
   },
 };
 </script>

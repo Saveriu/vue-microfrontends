@@ -42,9 +42,10 @@ export default {
     microAppComponent: null,
   }),
   async created() {
-    this.microAppComponent = await externalComponent(
-      `/apps/${this.microAppId}.umd.js`
-    );
+    console.debug(`Load app ${this.microAppId}`);
+    const app = await externalComponent(`/apps/${this.microAppId}.umd.js`);
+    console.debug(`App ${this.microAppId}`, app);
+    this.microAppComponent = app;
   },
 };
 </script>
