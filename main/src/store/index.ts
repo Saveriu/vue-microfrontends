@@ -5,9 +5,19 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    microApps: ["micro-app1", "micro-app2"]
+    microApps: ["micro-app1", "micro-app2"],
+    count:0
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    dummyMutation(state) {
+      state.count = state.count+1;
+    }
+  },
+  actions: {
+    dummy({ commit }) {
+      commit("dummyMutation")
+    }
+
+  },
   modules: {}
 });

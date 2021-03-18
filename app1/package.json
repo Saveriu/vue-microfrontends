@@ -2,19 +2,14 @@
   "name": "app1",
   "version": "0.1.0",
   "private": true,
-  "vue": {
-    "css": {
-      "extract": false
-    }
-  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "wc": "vue-cli-service build --target wc --name micro-app1",
-    "postwc": "copy dist\\micro-app1.js ..\\main\\public\\apps\\",
     "lib": "vue-cli-service build --target lib --name micro-app1",
-    "postlib": "copy dist\\micro-app1.umd.js ..\\main\\public\\apps\\"
+    "postlib": "copy dist\\micro-app1.umd.js ..\\main\\public\\apps\\",
+    "postwc": "copy dist\\micro-app1.js ..\\main\\public\\apps\\",
+    "wc": "vue-cli-service build --target wc --name micro-app1"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -37,9 +32,14 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^1.19.1",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
+  },
+  "vue": {
+    "css": {
+      "extract": false
+    }
   }
 }

@@ -1,16 +1,18 @@
 <template>
   <v-card>
-    <v-card-title primary-title> I contains {{ microAppId }} </v-card-title>
-    <v-card-text>
-      <v-card>
-        <component :is="microAppComponent" :artifactURIs="artifactsURIs" />
-      </v-card>
-    </v-card-text>
+    <v-card-title>
+      {{ microAppId }} container with inner state:{{ innerState }}
+    </v-card-title>
+
+    <v-card color="accent">
+      <component :is="microAppComponent" :artifactURIs="artifactsURIs" />
+    </v-card>
   </v-card>
 </template>
 
 <script lang="ts">
 import externalComponent from "@/utils";
+// import microApp from '../../public/apps/micro-app1.umd.js'
 
 // const AsyncComponent = () => ({
 //   // Le composant à charger (doit être une `Promise`)
@@ -39,8 +41,14 @@ export default {
     },
   },
   data: () => ({
+    // microAppComponent: microApp,
     microAppComponent: null,
   }),
+  computed: {
+    innerState() {
+      return this.$store.state[this.microAppId];
+    },
+  },
   async created() {
     console.debug(`Load app ${this.microAppId}`);
     const app = await externalComponent(`/apps/${this.microAppId}.umd.js`);
