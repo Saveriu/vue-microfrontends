@@ -1,7 +1,8 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-  </div>
+  <v-card>
+    <v-card-title>Main App</v-card-title>
+    global state: {{ globalState }}
+  </v-card>
 </template>
 
 <script lang="ts">
@@ -9,6 +10,13 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "Home",
-  components: {}
+  components: {},
+  computed: {
+    globalState() {
+      return this.$store.state;
+    },
+
+    
+  },
 });
 </script>

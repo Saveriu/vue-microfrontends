@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router"; 
 import Home from "../views/Home.vue";
-import GenericWrapper from "@/views/GenericWrapper";
+import AppContainer from "@/views/AppContainer";
 
 Vue.use(VueRouter);
 
@@ -23,7 +23,7 @@ const routes: Array<RouteConfig> = [
       artifactsURIs: getArtifactsURIs("titi"),
       microAppId : route.params.appId
     }),
-    component: GenericWrapper
+    component: AppContainer
   }
 ];
 

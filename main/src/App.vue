@@ -10,33 +10,17 @@
           transition="scale-transition"
           width="40"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
       </div>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <h1>Micro frontend POC</h1>
 
       <template #extension>
         <v-tabs align-with-title>
-          <v-tab to="/">Home</v-tab>
-          <v-tab to="/apps/micro-app1">App1</v-tab>
+          <v-tab to="/">Main</v-tab>
+          <v-tab to="/apps/micro-app1">Micro App 1</v-tab>
         </v-tabs>
+        <v-divider></v-divider>
+        <v-btn color="success" @click="storeAction">GLOBAL ACTION!</v-btn>
       </template>
     </v-app-bar>
 
@@ -55,5 +39,10 @@ export default Vue.extend({
   data: () => ({
     //
   }),
+  methods: {
+    storeAction() {
+      this.$store.dispatch("dummy");
+    }
+  }
 });
 </script>

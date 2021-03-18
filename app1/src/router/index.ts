@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Page1 from "../views/Page1.vue";
 
-
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
