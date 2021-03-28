@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@olea/microApp1": "//localhost:8080/apps/micro-app1.umd.js"
+  }
+}
