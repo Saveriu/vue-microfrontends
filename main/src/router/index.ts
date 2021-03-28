@@ -1,36 +1,36 @@
 import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router"; 
+import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
-import AppContainer from "@/views/AppContainer";
+import AppContainer from "@/views/AppContainer.vue";
 
 Vue.use(VueRouter);
 
 function getArtifactsURIs(jobId: string): string[] {
   //load from store
-  return ["/artifacts/1234","/artifacts/5678"];
+  return ["/artifacts/1234", "/artifacts/5678"];
 }
 
-const routes: Array<RouteConfig> = [ 
+const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/apps/:appId",
     name: "App",
-    props: route => ({
+    props: (route) => ({
       artifactsURIs: getArtifactsURIs("titi"),
-      microAppId : route.params.appId
+      microAppId: route.params.appId,
     }),
-    component: AppContainer
-  }
+    component: AppContainer,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

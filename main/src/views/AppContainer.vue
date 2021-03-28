@@ -10,8 +10,10 @@
   </v-card>
 </template>
 
-<script lang="ts">
-import externalComponent from "@/utils";
+<script lang="js">
+
+
+// import externalComponent from "@/utils";
 // import microApp from '../../public/apps/micro-app1.umd.js'
 
 // const AsyncComponent = () => ({
@@ -50,13 +52,25 @@ export default {
     },
   },
   async created() {
+
+    let promise ;
     console.debug(`Load app ${this.microAppId}`);
-    const app = await externalComponent(`/apps/${this.microAppId}.umd.js`);
+    try{
+
+    //eslint-disable-next-line
+    promise = System.import("@olea/microApp1");
+    const app = await promise;
     console.debug(`App ${this.microAppId}`, app);
     this.microAppComponent = app;
+  }
+  catch (e) {
+
+    console.error("Error chargement app",e)
+   console.error("Promise",promise)
+
+  }
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>
