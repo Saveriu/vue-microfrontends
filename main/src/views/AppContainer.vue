@@ -4,32 +4,13 @@
       {{ microAppId }} container with inner state:{{ innerState }}
     </v-card-title>
 
-    <v-card color="accent">
+    <v-card style="border: 2px dotted red">
       <component :is="microAppComponent" :artifactURIs="artifactsURIs" />
     </v-card>
   </v-card>
 </template>
 
 <script lang="js">
-
-
-// import externalComponent from "@/utils";
-// import microApp from '../../public/apps/micro-app1.umd.js'
-
-// const AsyncComponent = () => ({
-//   // Le composant à charger (doit être une `Promise`)
-//   component: import('./MonComposant.vue'),
-//   // Un composant à utiliser pendant que le composant asynchrone se charge
-//   loading: LoadingComponent,
-//   // Un composant d'erreur à utiliser au cas où le chargement échoue
-//   error: ErrorComponent,
-//   // Le délai à patienter avant d'afficher le composant de chargement. Par défaut : 200ms.
-//   delay: 200,
-//   // Le composant d'erreur sera affiché si un délai de timeout est fourni et dépassé.
-//   // Par défaut: délai infini.
-//   timeout: 3000
-// })
-
 export default {
   props: {
     microAppId: {
@@ -43,7 +24,6 @@ export default {
     },
   },
   data: () => ({
-    // microAppComponent: microApp,
     microAppComponent: null,
   }),
   computed: {
@@ -51,25 +31,25 @@ export default {
       return this.$store.state[this.microAppId];
     },
   },
-  async created() {
-
-    let promise ;
-    console.debug(`Load app ${this.microAppId}`);
-    try{
-
-    //eslint-disable-next-line
-    promise = System.import("@olea/microApp1");
-    const app = await promise;
-    console.debug(`App ${this.microAppId}`, app);
-    this.microAppComponent = app;
-  }
-  catch (e) {
-
-    console.error("Error chargement app",e)
-   console.error("Promise",promise)
-
-  }
+  async updated() {
+    await this.loadMicroApp();
   },
+  async created() {
+    await this.loadMicroApp();
+  },
+  methods: {
+    async loadMicroApp() {
+    console.log("Pull Application", this.microAppId)
+      try {
+      //eslint-disable-next-line
+        this.microAppComponent = await System.import(`@olea/${this.microAppId}`);
+      }
+      catch(e) {
+        this.microAppComponent = null
+        console.error(e)
+    }
+    }
+  }
 };
 </script>
 

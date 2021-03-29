@@ -14,8 +14,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
     />
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
     <meta name="importmap-type" content="systemjs-importmap" />
     <script type="systemjs-importmap" src="/apps/importmap.json"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.js"></script>
@@ -28,6 +31,17 @@
         continue.</strong
       >
     </noscript>
+    <!-- <script type="module">
+      import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.esm.browser.js";
+      var vue = Vue;
+    </script> -->
+    <script>
+      // (function() {
+      //   System.import("vue").then((modules) => {
+      //     var Vue = modules[0];
+      //   });
+      // })();
+    </script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

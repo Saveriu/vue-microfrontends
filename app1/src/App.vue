@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import App1Component from "./components/App1Component.vue";
+import App1Component from "@/components/App1Component.vue";
 
 export default {
   components: { App1Component },
@@ -20,16 +20,13 @@ export default {
       state: { count: 0 },
       mutations: {
         increment(state) {
-           state.count = state.count+1;
-        }
+          state.count = state.count + 1;
+        },
       },
-      action: {
-      },
+      action: {},
     });
   },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
