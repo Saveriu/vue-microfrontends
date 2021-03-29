@@ -32,7 +32,7 @@ export default {
     },
   },
   async updated() {
-    // await this.loadMicroApp();
+    await this.loadMicroApp();
   },
   async created() {
     await this.loadMicroApp();

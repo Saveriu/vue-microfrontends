@@ -142,34 +142,6 @@ module.exports = function (fn, that, length) {
 
 /***/ }),
 
-/***/ "0481":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var $ = __webpack_require__("23e7");
-var flattenIntoArray = __webpack_require__("a2bf");
-var toObject = __webpack_require__("7b0b");
-var toLength = __webpack_require__("50c4");
-var toInteger = __webpack_require__("a691");
-var arraySpeciesCreate = __webpack_require__("65f0");
-
-// `Array.prototype.flat` method
-// https://tc39.es/ecma262/#sec-array.prototype.flat
-$({ target: 'Array', proto: true }, {
-  flat: function flat(/* depthArg = 1 */) {
-    var depthArg = arguments.length ? arguments[0] : undefined;
-    var O = toObject(this);
-    var sourceLen = toLength(O.length);
-    var A = arraySpeciesCreate(O, 0);
-    A.length = flattenIntoArray(A, O, O, sourceLen, 0, depthArg === undefined ? 1 : toInteger(depthArg));
-    return A;
-  }
-});
-
-
-/***/ }),
-
 /***/ "0538":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1430,20 +1402,6 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
 
 /***/ }),
 
-/***/ "3885":
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".theme--light.v-icon{color:rgba(0,0,0,.54)}.theme--light.v-icon:focus:after{opacity:.12}.theme--light.v-icon.v-icon.v-icon--disabled{color:rgba(0,0,0,.38)!important}.theme--dark.v-icon{color:#fff}.theme--dark.v-icon:focus:after{opacity:.24}.theme--dark.v-icon.v-icon.v-icon--disabled{color:hsla(0,0%,100%,.5)!important}.v-icon.v-icon{align-items:center;display:inline-flex;font-feature-settings:\"liga\";font-size:24px;justify-content:center;letter-spacing:normal;line-height:1;position:relative;text-indent:0;transition:.3s cubic-bezier(.25,.8,.5,1),visibility 0s;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-icon.v-icon:after{background-color:currentColor;border-radius:50%;content:\"\";display:inline-block;height:100%;left:0;opacity:0;pointer-events:none;position:absolute;top:0;transform:scale(1.3);width:100%;transition:opacity .2s cubic-bezier(.4,0,.6,1)}.v-icon.v-icon--dense{font-size:20px}.v-icon--right{margin-left:8px}.v-icon--left{margin-right:8px}.v-icon.v-icon.v-icon--link{cursor:pointer;outline:none}.v-icon--disabled{pointer-events:none}.v-icon--dense__component,.v-icon--dense__svg{height:20px}.v-icon__component,.v-icon__svg{height:24px;width:24px}.v-icon__svg{fill:currentColor}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "38cf":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1709,22 +1667,6 @@ fixRegExpWellKnownSymbolLogic('match', 1, function (MATCH, nativeMatch, maybeCal
   ];
 });
 
-
-/***/ }),
-
-/***/ "4804":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("3885");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("47daea2c", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -2508,22 +2450,6 @@ module.exports = function (bitmap, value) {
   };
 };
 
-
-/***/ }),
-
-/***/ "5e23":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("c21f");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("51117aec", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -3816,22 +3742,6 @@ module.exports = function (S, index, unicode) {
 
 /***/ }),
 
-/***/ "8b0d":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("f2e6");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("96b8711e", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "8bbf":
 /***/ (function(module, exports) {
 
@@ -4239,20 +4149,6 @@ exports.BROKEN_CARET = fails(function () {
 
 /***/ }),
 
-/***/ "a156":
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".theme--light.v-application{background:#fff;color:rgba(0,0,0,.87)}.theme--light.v-application .text--primary{color:rgba(0,0,0,.87)!important}.theme--light.v-application .text--secondary{color:rgba(0,0,0,.6)!important}.theme--light.v-application .text--disabled{color:rgba(0,0,0,.38)!important}.theme--dark.v-application{background:#121212;color:#fff}.theme--dark.v-application .text--primary{color:#fff!important}.theme--dark.v-application .text--secondary{color:hsla(0,0%,100%,.7)!important}.theme--dark.v-application .text--disabled{color:hsla(0,0%,100%,.5)!important}.v-application{display:flex}.v-application a{cursor:pointer}.v-application--is-rtl{direction:rtl}.v-application--wrap{flex:1 1 auto;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;min-height:100vh;max-width:100%;position:relative}@-moz-document url-prefix(){@media print{.v-application,.v-application--wrap{display:block}}}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "a15b":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4275,46 +4171,6 @@ $({ target: 'Array', proto: true, forced: ES3_STRINGS || !STRICT_METHOD }, {
     return nativeJoin.call(toIndexedObject(this), separator === undefined ? ',' : separator);
   }
 });
-
-
-/***/ }),
-
-/***/ "a2bf":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var isArray = __webpack_require__("e8b5");
-var toLength = __webpack_require__("50c4");
-var bind = __webpack_require__("0366");
-
-// `FlattenIntoArray` abstract operation
-// https://tc39.github.io/proposal-flatMap/#sec-FlattenIntoArray
-var flattenIntoArray = function (target, original, source, sourceLen, start, depth, mapper, thisArg) {
-  var targetIndex = start;
-  var sourceIndex = 0;
-  var mapFn = mapper ? bind(mapper, thisArg, 3) : false;
-  var element;
-
-  while (sourceIndex < sourceLen) {
-    if (sourceIndex in source) {
-      element = mapFn ? mapFn(source[sourceIndex], sourceIndex, original) : source[sourceIndex];
-
-      if (depth > 0 && isArray(element)) {
-        targetIndex = flattenIntoArray(target, original, element, toLength(element.length), targetIndex, depth - 1) - 1;
-      } else {
-        if (targetIndex >= 0x1FFFFFFFFFFFFF) throw TypeError('Exceed the acceptable array length');
-        target[targetIndex] = element;
-      }
-
-      targetIndex++;
-    }
-    sourceIndex++;
-  }
-  return targetIndex;
-};
-
-module.exports = flattenIntoArray;
 
 
 /***/ }),
@@ -5377,20 +5233,6 @@ module.exports = function (input, PREFERRED_STRING) {
 
 /***/ }),
 
-/***/ "c21f":
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".theme--light.v-toolbar.v-sheet{background-color:#fff}.theme--dark.v-toolbar.v-sheet{background-color:#272727}.v-sheet.v-toolbar{border-radius:0}.v-sheet.v-toolbar:not(.v-sheet--outlined){box-shadow:0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12)}.v-sheet.v-toolbar.v-sheet--shaped{border-radius:24px 0}.v-toolbar{contain:layout;display:block;flex:1 1 auto;max-width:100%;transition:transform .2s cubic-bezier(.4,0,.2,1),background-color .2s cubic-bezier(.4,0,.2,1),left .2s cubic-bezier(.4,0,.2,1),right .2s cubic-bezier(.4,0,.2,1),box-shadow .28s cubic-bezier(.4,0,.2,1),max-width .25s cubic-bezier(.4,0,.2,1),width .25s cubic-bezier(.4,0,.2,1);position:relative;box-shadow:0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12)}.v-toolbar .v-input{padding-top:0;margin-top:0}.v-toolbar__content,.v-toolbar__extension{padding:4px 16px}.v-toolbar__content .v-btn.v-btn--icon.v-size--default,.v-toolbar__extension .v-btn.v-btn--icon.v-size--default{height:48px;width:48px}.v-application--is-ltr .v-toolbar__content>.v-btn.v-btn--icon:first-child,.v-application--is-ltr .v-toolbar__extension>.v-btn.v-btn--icon:first-child{margin-left:-12px}.v-application--is-rtl .v-toolbar__content>.v-btn.v-btn--icon:first-child,.v-application--is-rtl .v-toolbar__extension>.v-btn.v-btn--icon:first-child{margin-right:-12px}.v-application--is-ltr .v-toolbar__content>.v-btn.v-btn--icon:first-child+.v-toolbar__title,.v-application--is-ltr .v-toolbar__extension>.v-btn.v-btn--icon:first-child+.v-toolbar__title{padding-left:20px}.v-application--is-rtl .v-toolbar__content>.v-btn.v-btn--icon:first-child+.v-toolbar__title,.v-application--is-rtl .v-toolbar__extension>.v-btn.v-btn--icon:first-child+.v-toolbar__title{padding-right:20px}.v-application--is-ltr .v-toolbar__content>.v-btn.v-btn--icon:last-child,.v-application--is-ltr .v-toolbar__extension>.v-btn.v-btn--icon:last-child{margin-right:-12px}.v-application--is-rtl .v-toolbar__content>.v-btn.v-btn--icon:last-child,.v-application--is-rtl .v-toolbar__extension>.v-btn.v-btn--icon:last-child{margin-left:-12px}.v-toolbar__content>.v-tabs,.v-toolbar__extension>.v-tabs{height:inherit;margin-top:-4px;margin-bottom:-4px}.v-toolbar__content>.v-tabs>.v-slide-group.v-tabs-bar,.v-toolbar__extension>.v-tabs>.v-slide-group.v-tabs-bar{background-color:inherit;height:inherit}.v-toolbar__content>.v-tabs:first-child,.v-toolbar__extension>.v-tabs:first-child{margin-left:-16px}.v-toolbar__content>.v-tabs:last-child,.v-toolbar__extension>.v-tabs:last-child{margin-right:-16px}.v-toolbar__content,.v-toolbar__extension{align-items:center;display:flex;position:relative;z-index:0}.v-toolbar__image{position:absolute;top:0;bottom:0;width:100%;z-index:0;contain:strict}.v-toolbar__image,.v-toolbar__image .v-image{border-radius:inherit}.v-toolbar__items{display:flex;height:inherit}.v-toolbar__items>.v-btn{border-radius:0;height:100%!important;max-height:none}.v-toolbar__title{font-size:1.25rem;line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.v-toolbar.v-toolbar--absolute{position:absolute;top:0;z-index:1}.v-toolbar.v-toolbar--bottom{top:auto;bottom:0}.v-toolbar.v-toolbar--collapse .v-toolbar__title{white-space:nowrap}.v-toolbar.v-toolbar--collapsed{max-width:112px;overflow:hidden}.v-application--is-ltr .v-toolbar.v-toolbar--collapsed{border-bottom-right-radius:24px}.v-application--is-rtl .v-toolbar.v-toolbar--collapsed{border-bottom-left-radius:24px}.v-toolbar.v-toolbar--collapsed .v-toolbar__extension,.v-toolbar.v-toolbar--collapsed .v-toolbar__title{display:none}.v-toolbar--dense .v-toolbar__content,.v-toolbar--dense .v-toolbar__extension{padding-top:0;padding-bottom:0}.v-toolbar--flat{box-shadow:0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12)!important}.v-toolbar--floating{display:inline-flex}.v-toolbar--prominent .v-toolbar__content{align-items:flex-start}.v-toolbar--prominent .v-toolbar__title{font-size:1.5rem;padding-top:6px}.v-toolbar--prominent:not(.v-toolbar--bottom) .v-toolbar__title{align-self:flex-end;padding-bottom:6px;padding-top:0}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "c430":
 /***/ (function(module, exports) {
 
@@ -6142,22 +5984,6 @@ module.exports = Object.keys || function keys(O) {
   return internalObjectKeys(O, enumBugKeys);
 };
 
-
-/***/ }),
-
-/***/ "df86":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("a156");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("0bfe4152", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -6927,20 +6753,6 @@ hiddenKeys[METADATA] = true;
 
 /***/ }),
 
-/***/ "f2e6":
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".theme--light.v-app-bar.v-toolbar.v-sheet{background-color:#f5f5f5}.theme--dark.v-app-bar.v-toolbar.v-sheet{background-color:#272727}.v-sheet.v-app-bar.v-toolbar{border-radius:0}.v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined){box-shadow:0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12)}.v-sheet.v-app-bar.v-toolbar.v-sheet--shaped{border-radius:24px 0}.v-app-bar:not([data-booted=true]){transition:none!important}.v-app-bar.v-app-bar--fixed{position:fixed;top:0;z-index:5}.v-app-bar.v-app-bar--hide-shadow{box-shadow:0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12)!important}.v-app-bar--fade-img-on-scroll .v-toolbar__image .v-image__image{transition:opacity .4s cubic-bezier(.4,0,.2,1)}.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll .v-toolbar__content{will-change:height}.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll .v-toolbar__image{will-change:opacity}.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--collapse-on-scroll .v-toolbar__extension{display:none}.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--is-scrolled .v-toolbar__title{padding-top:9px}.v-app-bar.v-toolbar--prominent.v-app-bar--shrink-on-scroll.v-app-bar--is-scrolled:not(.v-app-bar--bottom) .v-toolbar__title{padding-bottom:9px}.v-app-bar.v-app-bar--shrink-on-scroll .v-toolbar__title{font-size:inherit}.v-app-bar-title__content,.v-app-bar-title__placeholder{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.v-app-bar-title__content{position:absolute}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
 /***/ "f5df":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7064,12 +6876,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"aeff6b9e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=45edbe31&
-var Appvue_type_template_id_45edbe31_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app',[_c('v-app-bar',{attrs:{"app":"","color":"primary","dark":""}},[_c('div',{staticClass:"d-flex align-center"},[_c('v-img',{staticClass:"shrink mr-2",attrs:{"alt":"Vuetify Logo","contain":"","src":"https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png","transition":"scale-transition","width":"40"}}),_c('v-img',{staticClass:"shrink mt-1 hidden-sm-and-down",attrs:{"alt":"Vuetify Name","contain":"","min-width":"100","src":"https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png","width":"100"}})],1),_c('v-spacer'),_c('v-btn',{attrs:{"href":"https://github.com/vuetifyjs/vuetify/releases/latest","target":"_blank","text":""}},[_c('span',{staticClass:"mr-2"},[_vm._v("Latest Release")]),_c('v-icon',[_vm._v("mdi-open-in-new")])],1)],1),_c('v-main',[_c('HelloWorld')],1)],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"aeff6b9e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=df1c4588&
+var Appvue_type_template_id_df1c4588_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-main',[_c('v-btn',{attrs:{"color":"success"}},[_vm._v("JE SUIS UN VBUTTON")]),_c('HelloWorld')],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=45edbe31&
+// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=df1c4588&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"aeff6b9e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HelloWorld.vue?vue&type=template&id=08f729da&
 var HelloWorldvue_type_template_id_08f729da_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-container',[_c('v-row',{staticClass:"text-center"},[_c('v-col',{attrs:{"cols":"12"}},[_c('v-img',{staticClass:"my-3",attrs:{"src":__webpack_require__("9b19"),"contain":"","height":"200"}})],1),_c('v-col',{staticClass:"mb-4"},[_c('h1',{staticClass:"display-2 font-weight-bold mb-3"},[_vm._v("Welcome to Vuetify")]),_c('p',{staticClass:"subheading font-weight-regular"},[_vm._v(" For help and collaboration with other Vuetify developers, "),_c('br'),_vm._v("please join our online "),_c('a',{attrs:{"href":"https://community.vuetifyjs.com","target":"_blank"}},[_vm._v("Discord Community")])])]),_c('v-col',{staticClass:"mb-5",attrs:{"cols":"12"}},[_c('h2',{staticClass:"headline font-weight-bold mb-3"},[_vm._v("What's next?")]),_c('v-row',{attrs:{"justify":"center"}},_vm._l((_vm.whatsNext),function(next,i){return _c('a',{key:i,staticClass:"subheading mx-3",attrs:{"href":next.href,"target":"_blank"}},[_vm._v(" "+_vm._s(next.text)+" ")])}),0)],1),_c('v-col',{staticClass:"mb-5",attrs:{"cols":"12"}},[_c('h2',{staticClass:"headline font-weight-bold mb-3"},[_vm._v("Important Links")]),_c('v-row',{attrs:{"justify":"center"}},_vm._l((_vm.importantLinks),function(link,i){return _c('a',{key:i,staticClass:"subheading mx-3",attrs:{"href":link.href,"target":"_blank"}},[_vm._v(" "+_vm._s(link.text)+" ")])}),0)],1),_c('v-col',{staticClass:"mb-5",attrs:{"cols":"12"}},[_c('h2',{staticClass:"headline font-weight-bold mb-3"},[_vm._v("Ecosystem")]),_c('v-row',{attrs:{"justify":"center"}},_vm._l((_vm.ecosystem),function(eco,i){return _c('a',{key:i,staticClass:"subheading mx-3",attrs:{"href":eco.href,"target":"_blank"}},[_vm._v(" "+_vm._s(eco.text)+" ")])}),0)],1)],1)],1)}
@@ -11420,6 +11232,11 @@ var HelloWorld_component = normalizeComponent(
 
 installComponents_default()(HelloWorld_component, {VCol: VCol,VContainer: VContainer,VImg: VImg_VImg,VRow: VRow})
 
+// CONCATENATED MODULE: ./src/plugins/vuetify.ts
+
+
+external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.use(framework_Vuetify);
+/* harmony default export */ var vuetify = (new framework_Vuetify({}));
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=script&lang=js&
 //
 //
@@ -11428,42 +11245,10 @@ installComponents_default()(HelloWorld_component, {VCol: VCol,VContainer: VConta
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 /* harmony default export */ var Appvue_type_script_lang_js_ = ({
+  vuetify: vuetify,
   //eslint-disable-next-line
   name: "App",
   components: {
@@ -11476,75 +11261,11 @@ installComponents_default()(HelloWorld_component, {VCol: VCol,VContainer: VConta
 });
 // CONCATENATED MODULE: ./src/App.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_Appvue_type_script_lang_js_ = (Appvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VApp/VApp.sass
-var VApp = __webpack_require__("df86");
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VApp/VApp.js
-
-// Styles
- // Mixins
-
- // Utilities
-
-
-/* @vue/component */
-
-/* harmony default export */ var VApp_VApp = (mixins(themeable).extend({
-  name: 'v-app',
-  props: {
-    dark: {
-      type: Boolean,
-      default: undefined
-    },
-    id: {
-      type: String,
-      default: 'app'
-    },
-    light: {
-      type: Boolean,
-      default: undefined
-    }
-  },
-  computed: {
-    isDark: function isDark() {
-      return this.$vuetify.theme.dark;
-    }
-  },
-  beforeCreate: function beforeCreate() {
-    if (!this.$vuetify || this.$vuetify === this.$root) {
-      throw new Error('Vuetify is not properly initialized, see https://vuetifyjs.com/getting-started/quick-start#bootstrapping-the-vuetify-object');
-    }
-  },
-  render: function render(h) {
-    var wrapper = h('div', {
-      staticClass: 'v-application--wrap'
-    }, this.$slots.default);
-    return h('div', {
-      staticClass: 'v-application',
-      class: _objectSpread2({
-        'v-application--is-rtl': this.$vuetify.rtl,
-        'v-application--is-ltr': !this.$vuetify.rtl
-      }, this.themeClasses),
-      attrs: {
-        'data-app': true
-      },
-      domProps: {
-        id: this.id
-      }
-    }, [wrapper]);
-  }
-}));
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.fixed.js
 var es_string_fixed = __webpack_require__("c7cd");
 
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VAppBar/VAppBar.sass
-var VAppBar = __webpack_require__("8b0d");
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.flat.js
-var es_array_flat = __webpack_require__("0481");
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VToolbar/VToolbar.sass
-var VToolbar = __webpack_require__("5e23");
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBtn/VBtn.sass
+var VBtn = __webpack_require__("86cc");
 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VSheet/VSheet.sass
 var VSheet = __webpack_require__("25a8");
@@ -11786,679 +11507,6 @@ function makeWatcher(property) {
     return h(this.tag, this.setBackgroundColor(this.color, data), this.$slots.default);
   }
 }));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VToolbar/VToolbar.js
-
-
-
-
-// Styles
- // Extensions
-
- // Components
-
- // Utilities
-
-
-
-/* @vue/component */
-
-/* harmony default export */ var VToolbar_VToolbar = (VSheet_VSheet.extend({
-  name: 'v-toolbar',
-  props: {
-    absolute: Boolean,
-    bottom: Boolean,
-    collapse: Boolean,
-    dense: Boolean,
-    extended: Boolean,
-    extensionHeight: {
-      default: 48,
-      type: [Number, String]
-    },
-    flat: Boolean,
-    floating: Boolean,
-    prominent: Boolean,
-    short: Boolean,
-    src: {
-      type: [String, Object],
-      default: ''
-    },
-    tag: {
-      type: String,
-      default: 'header'
-    }
-  },
-  data: function data() {
-    return {
-      isExtended: false
-    };
-  },
-  computed: {
-    computedHeight: function computedHeight() {
-      var height = this.computedContentHeight;
-      if (!this.isExtended) return height;
-      var extensionHeight = parseInt(this.extensionHeight);
-      return this.isCollapsed ? height : height + (!isNaN(extensionHeight) ? extensionHeight : 0);
-    },
-    computedContentHeight: function computedContentHeight() {
-      if (this.height) return parseInt(this.height);
-      if (this.isProminent && this.dense) return 96;
-      if (this.isProminent && this.short) return 112;
-      if (this.isProminent) return 128;
-      if (this.dense) return 48;
-      if (this.short || this.$vuetify.breakpoint.smAndDown) return 56;
-      return 64;
-    },
-    classes: function classes() {
-      return _objectSpread2(_objectSpread2({}, VSheet_VSheet.options.computed.classes.call(this)), {}, {
-        'v-toolbar': true,
-        'v-toolbar--absolute': this.absolute,
-        'v-toolbar--bottom': this.bottom,
-        'v-toolbar--collapse': this.collapse,
-        'v-toolbar--collapsed': this.isCollapsed,
-        'v-toolbar--dense': this.dense,
-        'v-toolbar--extended': this.isExtended,
-        'v-toolbar--flat': this.flat,
-        'v-toolbar--floating': this.floating,
-        'v-toolbar--prominent': this.isProminent
-      });
-    },
-    isCollapsed: function isCollapsed() {
-      return this.collapse;
-    },
-    isProminent: function isProminent() {
-      return this.prominent;
-    },
-    styles: function styles() {
-      return _objectSpread2(_objectSpread2({}, this.measurableStyles), {}, {
-        height: convertToUnit(this.computedHeight)
-      });
-    }
-  },
-  created: function created() {
-    var _this = this;
-
-    var breakingProps = [['app', '<v-app-bar app>'], ['manual-scroll', '<v-app-bar :value="false">'], ['clipped-left', '<v-app-bar clipped-left>'], ['clipped-right', '<v-app-bar clipped-right>'], ['inverted-scroll', '<v-app-bar inverted-scroll>'], ['scroll-off-screen', '<v-app-bar scroll-off-screen>'], ['scroll-target', '<v-app-bar scroll-target>'], ['scroll-threshold', '<v-app-bar scroll-threshold>'], ['card', '<v-app-bar flat>']];
-    /* istanbul ignore next */
-
-    breakingProps.forEach(function (_ref) {
-      var _ref2 = _slicedToArray(_ref, 2),
-          original = _ref2[0],
-          replacement = _ref2[1];
-
-      if (_this.$attrs.hasOwnProperty(original)) breaking(original, replacement, _this);
-    });
-  },
-  methods: {
-    genBackground: function genBackground() {
-      var props = {
-        height: convertToUnit(this.computedHeight),
-        src: this.src
-      };
-      var image = this.$scopedSlots.img ? this.$scopedSlots.img({
-        props: props
-      }) : this.$createElement(VImg_VImg, {
-        props: props
-      });
-      return this.$createElement('div', {
-        staticClass: 'v-toolbar__image'
-      }, [image]);
-    },
-    genContent: function genContent() {
-      return this.$createElement('div', {
-        staticClass: 'v-toolbar__content',
-        style: {
-          height: convertToUnit(this.computedContentHeight)
-        }
-      }, getSlot(this));
-    },
-    genExtension: function genExtension() {
-      return this.$createElement('div', {
-        staticClass: 'v-toolbar__extension',
-        style: {
-          height: convertToUnit(this.extensionHeight)
-        }
-      }, getSlot(this, 'extension'));
-    }
-  },
-  render: function render(h) {
-    this.isExtended = this.extended || !!this.$scopedSlots.extension;
-    var children = [this.genContent()];
-    var data = this.setBackgroundColor(this.color, {
-      class: this.classes,
-      style: this.styles,
-      on: this.$listeners
-    });
-    if (this.isExtended) children.push(this.genExtension());
-    if (this.src || this.$scopedSlots.img) children.unshift(this.genBackground());
-    return h(this.tag, data, children);
-  }
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/scroll/index.js
-
-
-function scroll_inserted(el, binding) {
-  var _ref = binding.modifiers || {},
-      _ref$self = _ref.self,
-      self = _ref$self === void 0 ? false : _ref$self;
-
-  var value = binding.value;
-  var options = _typeof(value) === 'object' && value.options || {
-    passive: true
-  };
-  var handler = typeof value === 'function' || 'handleEvent' in value ? value : value.handler;
-  var target = self ? el : binding.arg ? document.querySelector(binding.arg) : window;
-  if (!target) return;
-  target.addEventListener('scroll', handler, options);
-  el._onScroll = {
-    handler: handler,
-    options: options,
-    // Don't reference self
-    target: self ? undefined : target
-  };
-}
-
-function scroll_unbind(el) {
-  if (!el._onScroll) return;
-  var _el$_onScroll = el._onScroll,
-      handler = _el$_onScroll.handler,
-      options = _el$_onScroll.options,
-      _el$_onScroll$target = _el$_onScroll.target,
-      target = _el$_onScroll$target === void 0 ? el : _el$_onScroll$target;
-  target.removeEventListener('scroll', handler, options);
-  delete el._onScroll;
-}
-
-var Scroll = {
-  inserted: scroll_inserted,
-  unbind: scroll_unbind
-};
-/* harmony default export */ var directives_scroll = (Scroll);
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/positionable/index.js
-
-
-var availableProps = {
-  absolute: Boolean,
-  bottom: Boolean,
-  fixed: Boolean,
-  left: Boolean,
-  right: Boolean,
-  top: Boolean
-};
-function factory() {
-  var selected = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  return external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
-    name: 'positionable',
-    props: selected.length ? filterObjectOnKeys(availableProps, selected) : availableProps
-  });
-}
-/* harmony default export */ var positionable = (factory()); // Add a `*` before the second `/`
-
-/* Tests /
-let single = factory(['top']).extend({
-  created () {
-    this.top
-    this.bottom
-    this.absolute
-  }
-})
-
-let some = factory(['top', 'bottom']).extend({
-  created () {
-    this.top
-    this.bottom
-    this.absolute
-  }
-})
-
-let all = factory().extend({
-  created () {
-    this.top
-    this.bottom
-    this.absolute
-    this.foobar
-  }
-})
-/**/
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/applicationable/index.js
- // Util
-
-
-function applicationable(value) {
-  var events = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-
-  /* @vue/component */
-  return mixins(factory(['absolute', 'fixed'])).extend({
-    name: 'applicationable',
-    props: {
-      app: Boolean
-    },
-    computed: {
-      applicationProperty: function applicationProperty() {
-        return value;
-      }
-    },
-    watch: {
-      // If previous value was app
-      // reset the provided prop
-      app: function app(x, prev) {
-        prev ? this.removeApplication(true) : this.callUpdate();
-      },
-      applicationProperty: function applicationProperty(newVal, oldVal) {
-        this.$vuetify.application.unregister(this._uid, oldVal);
-      }
-    },
-    activated: function activated() {
-      this.callUpdate();
-    },
-    created: function created() {
-      for (var i = 0, length = events.length; i < length; i++) {
-        this.$watch(events[i], this.callUpdate);
-      }
-
-      this.callUpdate();
-    },
-    mounted: function mounted() {
-      this.callUpdate();
-    },
-    deactivated: function deactivated() {
-      this.removeApplication();
-    },
-    destroyed: function destroyed() {
-      this.removeApplication();
-    },
-    methods: {
-      callUpdate: function callUpdate() {
-        if (!this.app) return;
-        this.$vuetify.application.register(this._uid, this.applicationProperty, this.updateApplication());
-      },
-      removeApplication: function removeApplication() {
-        var force = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-        if (!force && !this.app) return;
-        this.$vuetify.application.unregister(this._uid, this.applicationProperty);
-      },
-      updateApplication: function updateApplication() {
-        return 0;
-      }
-    }
-  });
-}
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/scrollable/index.js
-
-// Directives
- // Utilities
-
- // Types
-
-
-/**
- * Scrollable
- *
- * Used for monitoring scrolling and
- * invoking functions based upon
- * scrolling thresholds being
- * met.
- */
-
-/* @vue/component */
-
-/* harmony default export */ var scrollable = (external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
-  name: 'scrollable',
-  directives: {
-    Scroll: Scroll
-  },
-  props: {
-    scrollTarget: String,
-    scrollThreshold: [String, Number]
-  },
-  data: function data() {
-    return {
-      currentScroll: 0,
-      currentThreshold: 0,
-      isActive: false,
-      isScrollingUp: false,
-      previousScroll: 0,
-      savedScroll: 0,
-      target: null
-    };
-  },
-  computed: {
-    /**
-     * A computed property that returns
-     * whether scrolling features are
-     * enabled or disabled
-     */
-    canScroll: function canScroll() {
-      return typeof window !== 'undefined';
-    },
-
-    /**
-     * The threshold that must be met before
-     * thresholdMet function is invoked
-     */
-    computedScrollThreshold: function computedScrollThreshold() {
-      return this.scrollThreshold ? Number(this.scrollThreshold) : 300;
-    }
-  },
-  watch: {
-    isScrollingUp: function isScrollingUp() {
-      this.savedScroll = this.savedScroll || this.currentScroll;
-    },
-    isActive: function isActive() {
-      this.savedScroll = 0;
-    }
-  },
-  mounted: function mounted() {
-    if (this.scrollTarget) {
-      this.target = document.querySelector(this.scrollTarget);
-
-      if (!this.target) {
-        consoleWarn("Unable to locate element with identifier ".concat(this.scrollTarget), this);
-      }
-    }
-  },
-  methods: {
-    onScroll: function onScroll() {
-      var _this = this;
-
-      if (!this.canScroll) return;
-      this.previousScroll = this.currentScroll;
-      this.currentScroll = this.target ? this.target.scrollTop : window.pageYOffset;
-      this.isScrollingUp = this.currentScroll < this.previousScroll;
-      this.currentThreshold = Math.abs(this.currentScroll - this.computedScrollThreshold);
-      this.$nextTick(function () {
-        if (Math.abs(_this.currentScroll - _this.savedScroll) > _this.computedScrollThreshold) _this.thresholdMet();
-      });
-    },
-
-    /**
-     * The method invoked when
-     * scrolling in any direction
-     * has exceeded the threshold
-     */
-    thresholdMet: function thresholdMet() {}
-  }
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
-
-/**
- * SSRBootable
- *
- * @mixin
- *
- * Used in layout components (drawer, toolbar, content)
- * to avoid an entry animation when using SSR
- */
-
-/* harmony default export */ var ssr_bootable = (external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
-  name: 'ssr-bootable',
-  data: function data() {
-    return {
-      isBooted: false
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    // Use setAttribute instead of dataset
-    // because dataset does not work well
-    // with unit tests
-    window.requestAnimationFrame(function () {
-      _this.$el.setAttribute('data-booted', 'true');
-
-      _this.isBooted = true;
-    });
-  }
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
-
-
-function toggleable_factory() {
-  var _watch;
-
-  var prop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'value';
-  var event = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'input';
-  return external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
-    name: 'toggleable',
-    model: {
-      prop: prop,
-      event: event
-    },
-    props: _defineProperty({}, prop, {
-      required: false
-    }),
-    data: function data() {
-      return {
-        isActive: !!this[prop]
-      };
-    },
-    watch: (_watch = {}, _defineProperty(_watch, prop, function (val) {
-      this.isActive = !!val;
-    }), _defineProperty(_watch, "isActive", function isActive(val) {
-      !!val !== this[prop] && this.$emit(event, val);
-    }), _watch)
-  });
-}
-/* eslint-disable-next-line @typescript-eslint/no-redeclare */
-
-var Toggleable = toggleable_factory();
-/* harmony default export */ var toggleable = (Toggleable);
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VAppBar/VAppBar.js
-
-
-
-// Styles
- // Extensions
-
- // Directives
-
- // Mixins
-
-
-
-
- // Utilities
-
-
-
-var baseMixins = mixins(VToolbar_VToolbar, scrollable, ssr_bootable, toggleable, applicationable('top', ['clippedLeft', 'clippedRight', 'computedHeight', 'invertedScroll', 'isExtended', 'isProminent', 'value']));
-/* @vue/component */
-
-/* harmony default export */ var VAppBar_VAppBar = (baseMixins.extend({
-  name: 'v-app-bar',
-  directives: {
-    Scroll: directives_scroll
-  },
-  provide: function provide() {
-    return {
-      VAppBar: this
-    };
-  },
-  props: {
-    clippedLeft: Boolean,
-    clippedRight: Boolean,
-    collapseOnScroll: Boolean,
-    elevateOnScroll: Boolean,
-    fadeImgOnScroll: Boolean,
-    hideOnScroll: Boolean,
-    invertedScroll: Boolean,
-    scrollOffScreen: Boolean,
-    shrinkOnScroll: Boolean,
-    value: {
-      type: Boolean,
-      default: true
-    }
-  },
-  data: function data() {
-    return {
-      isActive: this.value
-    };
-  },
-  computed: {
-    applicationProperty: function applicationProperty() {
-      return !this.bottom ? 'top' : 'bottom';
-    },
-    canScroll: function canScroll() {
-      return scrollable.options.computed.canScroll.call(this) && (this.invertedScroll || this.elevateOnScroll || this.hideOnScroll || this.collapseOnScroll || this.isBooted || // If falsy, user has provided an
-      // explicit value which should
-      // overwrite anything we do
-      !this.value);
-    },
-    classes: function classes() {
-      return _objectSpread2(_objectSpread2({}, VToolbar_VToolbar.options.computed.classes.call(this)), {}, {
-        'v-toolbar--collapse': this.collapse || this.collapseOnScroll,
-        'v-app-bar': true,
-        'v-app-bar--clipped': this.clippedLeft || this.clippedRight,
-        'v-app-bar--fade-img-on-scroll': this.fadeImgOnScroll,
-        'v-app-bar--elevate-on-scroll': this.elevateOnScroll,
-        'v-app-bar--fixed': !this.absolute && (this.app || this.fixed),
-        'v-app-bar--hide-shadow': this.hideShadow,
-        'v-app-bar--is-scrolled': this.currentScroll > 0,
-        'v-app-bar--shrink-on-scroll': this.shrinkOnScroll
-      });
-    },
-    scrollRatio: function scrollRatio() {
-      var threshold = this.computedScrollThreshold;
-      return Math.max((threshold - this.currentScroll) / threshold, 0);
-    },
-    computedContentHeight: function computedContentHeight() {
-      if (!this.shrinkOnScroll) return VToolbar_VToolbar.options.computed.computedContentHeight.call(this);
-      var min = this.dense ? 48 : 56;
-      var max = this.computedOriginalHeight;
-      return min + (max - min) * this.scrollRatio;
-    },
-    computedFontSize: function computedFontSize() {
-      if (!this.isProminent) return undefined;
-      var min = 1.25;
-      var max = 1.5;
-      return min + (max - min) * this.scrollRatio;
-    },
-    computedLeft: function computedLeft() {
-      if (!this.app || this.clippedLeft) return 0;
-      return this.$vuetify.application.left;
-    },
-    computedMarginTop: function computedMarginTop() {
-      if (!this.app) return 0;
-      return this.$vuetify.application.bar;
-    },
-    computedOpacity: function computedOpacity() {
-      if (!this.fadeImgOnScroll) return undefined;
-      return this.scrollRatio;
-    },
-    computedOriginalHeight: function computedOriginalHeight() {
-      var height = VToolbar_VToolbar.options.computed.computedContentHeight.call(this);
-      if (this.isExtended) height += parseInt(this.extensionHeight);
-      return height;
-    },
-    computedRight: function computedRight() {
-      if (!this.app || this.clippedRight) return 0;
-      return this.$vuetify.application.right;
-    },
-    computedScrollThreshold: function computedScrollThreshold() {
-      if (this.scrollThreshold) return Number(this.scrollThreshold);
-      return this.computedOriginalHeight - (this.dense ? 48 : 56);
-    },
-    computedTransform: function computedTransform() {
-      if (!this.canScroll || this.elevateOnScroll && this.currentScroll === 0 && this.isActive) return 0;
-      if (this.isActive) return 0;
-      var scrollOffScreen = this.scrollOffScreen ? this.computedHeight : this.computedContentHeight;
-      return this.bottom ? scrollOffScreen : -scrollOffScreen;
-    },
-    hideShadow: function hideShadow() {
-      if (this.elevateOnScroll && this.isExtended) {
-        return this.currentScroll < this.computedScrollThreshold;
-      }
-
-      if (this.elevateOnScroll) {
-        return this.currentScroll === 0 || this.computedTransform < 0;
-      }
-
-      return (!this.isExtended || this.scrollOffScreen) && this.computedTransform !== 0;
-    },
-    isCollapsed: function isCollapsed() {
-      if (!this.collapseOnScroll) {
-        return VToolbar_VToolbar.options.computed.isCollapsed.call(this);
-      }
-
-      return this.currentScroll > 0;
-    },
-    isProminent: function isProminent() {
-      return VToolbar_VToolbar.options.computed.isProminent.call(this) || this.shrinkOnScroll;
-    },
-    styles: function styles() {
-      return _objectSpread2(_objectSpread2({}, VToolbar_VToolbar.options.computed.styles.call(this)), {}, {
-        fontSize: convertToUnit(this.computedFontSize, 'rem'),
-        marginTop: convertToUnit(this.computedMarginTop),
-        transform: "translateY(".concat(convertToUnit(this.computedTransform), ")"),
-        left: convertToUnit(this.computedLeft),
-        right: convertToUnit(this.computedRight)
-      });
-    }
-  },
-  watch: {
-    canScroll: 'onScroll',
-    computedTransform: function computedTransform() {
-      // Normally we do not want the v-app-bar
-      // to update the application top value
-      // to avoid screen jump. However, in
-      // this situation, we must so that
-      // the clipped drawer can update
-      // its top value when scrolled
-      if (!this.canScroll || !this.clippedLeft && !this.clippedRight) return;
-      this.callUpdate();
-    },
-    invertedScroll: function invertedScroll(val) {
-      this.isActive = !val || this.currentScroll !== 0;
-    }
-  },
-  created: function created() {
-    if (this.invertedScroll) this.isActive = false;
-  },
-  methods: {
-    genBackground: function genBackground() {
-      var render = VToolbar_VToolbar.options.methods.genBackground.call(this);
-      render.data = this._b(render.data || {}, render.tag, {
-        style: {
-          opacity: this.computedOpacity
-        }
-      });
-      return render;
-    },
-    updateApplication: function updateApplication() {
-      return this.invertedScroll ? 0 : this.computedHeight + this.computedTransform;
-    },
-    thresholdMet: function thresholdMet() {
-      if (this.invertedScroll) {
-        this.isActive = this.currentScroll > this.computedScrollThreshold;
-        return;
-      }
-
-      if (this.hideOnScroll) {
-        this.isActive = this.isScrollingUp || this.currentScroll < this.computedScrollThreshold;
-      }
-
-      if (this.currentThreshold < this.computedScrollThreshold) return;
-      this.savedScroll = this.currentScroll;
-    }
-  },
-  render: function render(h) {
-    var render = VToolbar_VToolbar.options.render.call(this, h);
-    render.data = render.data || {};
-
-    if (this.canScroll) {
-      render.data.directives = render.data.directives || [];
-      render.data.directives.push({
-        arg: this.scrollTarget,
-        name: 'scroll',
-        value: this.onScroll
-      });
-    }
-
-    return render;
-  }
-}));
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VBtn/VBtn.sass
-var VBtn = __webpack_require__("86cc");
-
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VSheet/index.js
 
 
@@ -12642,7 +11690,7 @@ function registrable_provide(namespace) {
 
 // Mixins
 
-function groupable_factory(namespace, child, parent) {
+function factory(namespace, child, parent) {
   return inject(namespace, child, parent).extend({
     name: 'groupable',
     props: {
@@ -12681,8 +11729,87 @@ function groupable_factory(namespace, child, parent) {
 }
 /* eslint-disable-next-line @typescript-eslint/no-redeclare */
 
-var Groupable = groupable_factory('itemGroup');
+var Groupable = factory('itemGroup');
 /* harmony default export */ var groupable = (Groupable);
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/toggleable/index.js
+
+
+function toggleable_factory() {
+  var _watch;
+
+  var prop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'value';
+  var event = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'input';
+  return external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
+    name: 'toggleable',
+    model: {
+      prop: prop,
+      event: event
+    },
+    props: _defineProperty({}, prop, {
+      required: false
+    }),
+    data: function data() {
+      return {
+        isActive: !!this[prop]
+      };
+    },
+    watch: (_watch = {}, _defineProperty(_watch, prop, function (val) {
+      this.isActive = !!val;
+    }), _defineProperty(_watch, "isActive", function isActive(val) {
+      !!val !== this[prop] && this.$emit(event, val);
+    }), _watch)
+  });
+}
+/* eslint-disable-next-line @typescript-eslint/no-redeclare */
+
+var Toggleable = toggleable_factory();
+/* harmony default export */ var toggleable = (Toggleable);
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/positionable/index.js
+
+
+var availableProps = {
+  absolute: Boolean,
+  bottom: Boolean,
+  fixed: Boolean,
+  left: Boolean,
+  right: Boolean,
+  top: Boolean
+};
+function positionable_factory() {
+  var selected = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  return external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
+    name: 'positionable',
+    props: selected.length ? filterObjectOnKeys(availableProps, selected) : availableProps
+  });
+}
+/* harmony default export */ var positionable = (positionable_factory()); // Add a `*` before the second `/`
+
+/* Tests /
+let single = factory(['top']).extend({
+  created () {
+    this.top
+    this.bottom
+    this.absolute
+  }
+})
+
+let some = factory(['top', 'bottom']).extend({
+  created () {
+    this.top
+    this.bottom
+    this.absolute
+  }
+})
+
+let all = factory().extend({
+  created () {
+    this.top
+    this.bottom
+    this.absolute
+    this.foobar
+  }
+})
+/**/
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.link.js
 var es_string_link = __webpack_require__("9911");
 
@@ -13229,10 +12356,10 @@ var es_string_small = __webpack_require__("c96a");
 
 
 
-var VBtn_baseMixins = mixins(components_VSheet, routable, positionable, sizeable, groupable_factory('btnToggle'), toggleable_factory('inputValue')
+var baseMixins = mixins(components_VSheet, routable, positionable, sizeable, factory('btnToggle'), toggleable_factory('inputValue')
 /* @vue/component */
 );
-/* harmony default export */ var VBtn_VBtn = (VBtn_baseMixins.extend().extend({
+/* harmony default export */ var VBtn_VBtn = (baseMixins.extend().extend({
   name: 'v-btn',
   props: {
     activeClass: {
@@ -13376,242 +12503,40 @@ var VBtn_baseMixins = mixins(components_VSheet, routable, positionable, sizeable
     return h(tag, this.disabled ? data : setColor(this.color, data), children);
   }
 }));
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VIcon/VIcon.sass
-var VIcon = __webpack_require__("4804");
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VIcon/VIcon.js
-
-
-
-
-
-
-
-
- // Mixins
-
-
-
-
- // Util
-
- // Types
-
-
-
-var SIZE_MAP;
-
-(function (SIZE_MAP) {
-  SIZE_MAP["xSmall"] = "12px";
-  SIZE_MAP["small"] = "16px";
-  SIZE_MAP["default"] = "24px";
-  SIZE_MAP["medium"] = "28px";
-  SIZE_MAP["large"] = "36px";
-  SIZE_MAP["xLarge"] = "40px";
-})(SIZE_MAP || (SIZE_MAP = {}));
-
-function isFontAwesome5(iconType) {
-  return ['fas', 'far', 'fal', 'fab', 'fad'].some(function (val) {
-    return iconType.includes(val);
-  });
-}
-
-function isSvgPath(icon) {
-  return /^[mzlhvcsqta]\s*[-+.0-9][^mlhvzcsqta]+/i.test(icon) && /[\dz]$/i.test(icon) && icon.length > 4;
-}
-
-var VIcon_VIcon = mixins(binds_attrs, colorable, sizeable, themeable
-/* @vue/component */
-).extend({
-  name: 'v-icon',
-  props: {
-    dense: Boolean,
-    disabled: Boolean,
-    left: Boolean,
-    right: Boolean,
-    size: [Number, String],
-    tag: {
-      type: String,
-      required: false,
-      default: 'i'
-    }
-  },
-  computed: {
-    medium: function medium() {
-      return false;
-    },
-    hasClickListener: function hasClickListener() {
-      return Boolean(this.listeners$.click || this.listeners$['!click']);
-    }
-  },
-  methods: {
-    getIcon: function getIcon() {
-      var iconName = '';
-      if (this.$slots.default) iconName = this.$slots.default[0].text.trim();
-      return remapInternalIcon(this, iconName);
-    },
-    getSize: function getSize() {
-      var sizes = {
-        xSmall: this.xSmall,
-        small: this.small,
-        medium: this.medium,
-        large: this.large,
-        xLarge: this.xLarge
-      };
-      var explicitSize = keys(sizes).find(function (key) {
-        return sizes[key];
-      });
-      return explicitSize && SIZE_MAP[explicitSize] || convertToUnit(this.size);
-    },
-    // Component data for both font icon and SVG wrapper span
-    getDefaultData: function getDefaultData() {
-      return {
-        staticClass: 'v-icon notranslate',
-        class: {
-          'v-icon--disabled': this.disabled,
-          'v-icon--left': this.left,
-          'v-icon--link': this.hasClickListener,
-          'v-icon--right': this.right,
-          'v-icon--dense': this.dense
-        },
-        attrs: _objectSpread2({
-          'aria-hidden': !this.hasClickListener,
-          disabled: this.hasClickListener && this.disabled,
-          type: this.hasClickListener ? 'button' : undefined
-        }, this.attrs$),
-        on: this.listeners$
-      };
-    },
-    getSvgWrapperData: function getSvgWrapperData() {
-      var fontSize = this.getSize();
-
-      var wrapperData = _objectSpread2(_objectSpread2({}, this.getDefaultData()), {}, {
-        style: fontSize ? {
-          fontSize: fontSize,
-          height: fontSize,
-          width: fontSize
-        } : undefined
-      });
-
-      this.applyColors(wrapperData);
-      return wrapperData;
-    },
-    applyColors: function applyColors(data) {
-      data.class = _objectSpread2(_objectSpread2({}, data.class), this.themeClasses);
-      this.setTextColor(this.color, data);
-    },
-    renderFontIcon: function renderFontIcon(icon, h) {
-      var newChildren = [];
-      var data = this.getDefaultData();
-      var iconType = 'material-icons'; // Material Icon delimiter is _
-      // https://material.io/icons/
-
-      var delimiterIndex = icon.indexOf('-');
-      var isMaterialIcon = delimiterIndex <= -1;
-
-      if (isMaterialIcon) {
-        // Material icon uses ligatures.
-        newChildren.push(icon);
-      } else {
-        iconType = icon.slice(0, delimiterIndex);
-        if (isFontAwesome5(iconType)) iconType = '';
-      }
-
-      data.class[iconType] = true;
-      data.class[icon] = !isMaterialIcon;
-      var fontSize = this.getSize();
-      if (fontSize) data.style = {
-        fontSize: fontSize
-      };
-      this.applyColors(data);
-      return h(this.hasClickListener ? 'button' : this.tag, data, newChildren);
-    },
-    renderSvgIcon: function renderSvgIcon(icon, h) {
-      var svgData = {
-        class: 'v-icon__svg',
-        attrs: {
-          xmlns: 'http://www.w3.org/2000/svg',
-          viewBox: '0 0 24 24',
-          role: 'img',
-          'aria-hidden': true
-        }
-      };
-      var size = this.getSize();
-
-      if (size) {
-        svgData.style = {
-          fontSize: size,
-          height: size,
-          width: size
-        };
-      }
-
-      return h(this.hasClickListener ? 'button' : 'span', this.getSvgWrapperData(), [h('svg', svgData, [h('path', {
-        attrs: {
-          d: icon
-        }
-      })])]);
-    },
-    renderSvgIconComponent: function renderSvgIconComponent(icon, h) {
-      var data = {
-        class: {
-          'v-icon__component': true
-        }
-      };
-      var size = this.getSize();
-
-      if (size) {
-        data.style = {
-          fontSize: size,
-          height: size,
-          width: size
-        };
-      }
-
-      this.applyColors(data);
-      var component = icon.component;
-      data.props = icon.props;
-      data.nativeOn = data.on;
-      return h(this.hasClickListener ? 'button' : 'span', this.getSvgWrapperData(), [h(component, data)]);
-    }
-  },
-  render: function render(h) {
-    var icon = this.getIcon();
-
-    if (typeof icon === 'string') {
-      if (isSvgPath(icon)) {
-        return this.renderSvgIcon(icon, h);
-      }
-
-      return this.renderFontIcon(icon, h);
-    }
-
-    return this.renderSvgIconComponent(icon, h);
-  }
-});
-/* harmony default export */ var components_VIcon_VIcon = (external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
-  name: 'v-icon',
-  $_wrapperFor: VIcon_VIcon,
-  functional: true,
-  render: function render(h, _ref) {
-    var data = _ref.data,
-        children = _ref.children;
-    var iconName = ''; // Support usage of v-text and v-html
-
-    if (data.domProps) {
-      iconName = data.domProps.textContent || data.domProps.innerHTML || iconName; // Remove nodes so it doesn't
-      // overwrite our changes
-
-      delete data.domProps.textContent;
-      delete data.domProps.innerHTML;
-    }
-
-    return h(VIcon_VIcon, data, iconName ? [iconName] : children);
-  }
-}));
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VMain/VMain.sass
 var VMain = __webpack_require__("bd0c");
 
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/ssr-bootable/index.js
+
+/**
+ * SSRBootable
+ *
+ * @mixin
+ *
+ * Used in layout components (drawer, toolbar, content)
+ * to avoid an entry animation when using SSR
+ */
+
+/* harmony default export */ var ssr_bootable = (external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
+  name: 'ssr-bootable',
+  data: function data() {
+    return {
+      isBooted: false
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    // Use setAttribute instead of dataset
+    // because dataset does not work well
+    // with unit tests
+    window.requestAnimationFrame(function () {
+      _this.$el.setAttribute('data-booted', 'true');
+
+      _this.isBooted = true;
+    });
+  }
+}));
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VMain/VMain.js
 // Styles
  // Mixins
@@ -13656,10 +12581,6 @@ var VMain = __webpack_require__("bd0c");
     }, this.$slots.default)]);
   }
 }));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VGrid/VSpacer.js
-
-
-/* harmony default export */ var VSpacer = (createSimpleFunctional('spacer', 'div', 'v-spacer'));
 // CONCATENATED MODULE: ./src/App.vue
 
 
@@ -13670,7 +12591,7 @@ var VMain = __webpack_require__("bd0c");
 
 var App_component = normalizeComponent(
   src_Appvue_type_script_lang_js_,
-  Appvue_type_template_id_45edbe31_render,
+  Appvue_type_template_id_df1c4588_render,
   staticRenderFns,
   false,
   null,
@@ -13685,12 +12606,7 @@ var App_component = normalizeComponent(
 
 
 
-
-
-
-
-
-installComponents_default()(App_component, {VApp: VApp_VApp,VAppBar: VAppBar_VAppBar,VBtn: VBtn_VBtn,VIcon: components_VIcon_VIcon,VImg: VImg_VImg,VMain: VMain_VMain,VSpacer: VSpacer})
+installComponents_default()(App_component, {VBtn: VBtn_VBtn,VMain: VMain_VMain})
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
