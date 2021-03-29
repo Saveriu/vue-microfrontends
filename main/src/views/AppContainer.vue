@@ -32,7 +32,7 @@ export default {
     },
   },
   async updated() {
-    await this.loadMicroApp();
+    // await this.loadMicroApp();
   },
   async created() {
     await this.loadMicroApp();
@@ -43,6 +43,7 @@ export default {
       try {
       //eslint-disable-next-line
         this.microAppComponent = await System.import(`@olea/${this.microAppId}`);
+        console.log("App pulled!")
       }
       catch(e) {
         this.microAppComponent = null

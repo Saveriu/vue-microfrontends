@@ -5,6 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "firefox",
+            "request": "attach",
+            "name": "Attach"
+        },
+    {
+        "name": "Attach to Chrome",
+        "port": 9222,
+        "request": "attach",
+        "type": "pwa-chrome",
+        "webRoot": "${workspaceFolder}"
+    },
+        {
             "name": "Launch index.html",
             "type": "firefox",
             "request": "launch",

@@ -6,7 +6,11 @@ module.exports = {
         "Access-Control-Allow-Origin": "*",
       },
     },
-    externals: ["vue-router", "vuex"],
+    externals: {
+      vue: { commonjs: "vue", commonjs2: "vue", root: "Vue", amd: "vue" },
+      "vue-router": "vue-router",
+      vuex: "vuex",
+    },
     // output: {
     //   libraryTarget: "system",
     // },

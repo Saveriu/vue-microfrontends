@@ -39,15 +39,11 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script>
 import HelloWorld from "./components/HelloWorld.vue";
 
-import vuetify from "./plugins/vuetify";
-
-export default Vue.extend({
+export default {
   //eslint-disable-next-line
-  vuetify,
   name: "App",
 
   components: {
@@ -57,5 +53,5 @@ export default Vue.extend({
   data: () => ({
     //
   }),
-});
+};
 </script>
