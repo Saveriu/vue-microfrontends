@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -19,6 +19,7 @@
           <v-tab to="/">Main</v-tab>
           <v-tab to="/apps/microApp1">Micro App 1</v-tab>
           <v-tab to="/apps/microApp2">Micro App 2</v-tab>
+          <v-tab to="/apps/mrperf">mrperf</v-tab>
         </v-tabs>
         <v-divider></v-divider>
         <v-btn color="success" @click="storeAction">GLOBAL ACTION!</v-btn>
@@ -36,7 +37,6 @@ import store from "./store";
 export default Vue.extend({
   store,
   name: "App",
-
   data: () => ({
     //
   }),
@@ -44,6 +44,9 @@ export default Vue.extend({
     storeAction() {
       this.$store.dispatch("dummy");
     },
+  },
+  created() {
+    console.debug("Vuetify", this.$vuetify);
   },
 });
 </script>

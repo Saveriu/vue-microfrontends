@@ -2,6 +2,7 @@
   "imports": {
     "@olea/microApp1": "//localhost:8080/apps/micro-app1.umd.js",
     "@olea/microApp2": "//localhost:8080/apps/micro-app2.umd.js",
+    "@olea/mrperf": "//localhost:8080/apps/mrperf.umd.js",
     "vue": "https://unpkg.com/vue"
   }
 }

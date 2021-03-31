@@ -142,6 +142,34 @@ module.exports = function (fn, that, length) {
 
 /***/ }),
 
+/***/ "0481":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__("23e7");
+var flattenIntoArray = __webpack_require__("a2bf");
+var toObject = __webpack_require__("7b0b");
+var toLength = __webpack_require__("50c4");
+var toInteger = __webpack_require__("a691");
+var arraySpeciesCreate = __webpack_require__("65f0");
+
+// `Array.prototype.flat` method
+// https://tc39.es/ecma262/#sec-array.prototype.flat
+$({ target: 'Array', proto: true }, {
+  flat: function flat(/* depthArg = 1 */) {
+    var depthArg = arguments.length ? arguments[0] : undefined;
+    var O = toObject(this);
+    var sourceLen = toLength(O.length);
+    var A = arraySpeciesCreate(O, 0);
+    A.length = flattenIntoArray(A, O, O, sourceLen, 0, depthArg === undefined ? 1 : toInteger(depthArg));
+    return A;
+  }
+});
+
+
+/***/ }),
+
 /***/ "0538":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1112,6 +1140,20 @@ module.exports = function (CONSTRUCTOR_NAME) {
     });
   }
 };
+
+
+/***/ }),
+
+/***/ "298f":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".theme--light.v-progress-linear{color:rgba(0,0,0,.87)}.theme--dark.v-progress-linear{color:#fff}.v-progress-linear{background:transparent;overflow:hidden;position:relative;transition:.2s cubic-bezier(.4,0,.6,1);width:100%}.v-progress-linear__buffer{height:inherit;left:0;position:absolute;top:0;transition:inherit;width:100%}.v-progress-linear--reverse .v-progress-linear__buffer{left:auto;right:0}.v-progress-linear__background{bottom:0;left:0;position:absolute;top:0;transition:inherit}.v-progress-linear--reverse .v-progress-linear__background{left:auto;right:0}.v-progress-linear__content{align-items:center;display:flex;height:100%;left:0;justify-content:center;position:absolute;top:0;width:100%}.v-progress-linear--reverse .v-progress-linear__content{left:auto;right:0}.v-progress-linear__determinate{height:inherit;left:0;position:absolute;transition:inherit}.v-progress-linear--reverse .v-progress-linear__determinate{left:auto;right:0}.v-progress-linear .v-progress-linear__indeterminate .long,.v-progress-linear .v-progress-linear__indeterminate .short{background-color:inherit;bottom:0;height:inherit;left:0;position:absolute;right:auto;top:0;width:auto;will-change:left,right}.v-progress-linear .v-progress-linear__indeterminate--active .long{-webkit-animation-name:indeterminate-ltr;animation-name:indeterminate-ltr;-webkit-animation-duration:2.2s;animation-duration:2.2s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.v-progress-linear .v-progress-linear__indeterminate--active .short{-webkit-animation-name:indeterminate-short-ltr;animation-name:indeterminate-short-ltr;-webkit-animation-duration:2.2s;animation-duration:2.2s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.v-progress-linear--reverse .v-progress-linear__indeterminate .long,.v-progress-linear--reverse .v-progress-linear__indeterminate .short{left:auto;right:0}.v-progress-linear--reverse .v-progress-linear__indeterminate--active .long{-webkit-animation-name:indeterminate-rtl;animation-name:indeterminate-rtl}.v-progress-linear--reverse .v-progress-linear__indeterminate--active .short{-webkit-animation-name:indeterminate-short-rtl;animation-name:indeterminate-short-rtl}.v-progress-linear__stream{-webkit-animation:stream-ltr .25s linear infinite;animation:stream-ltr .25s linear infinite;border-color:currentColor;border-top:4px dotted;bottom:0;left:auto;right:-8px;opacity:.3;pointer-events:none;position:absolute;top:calc(50% - 2px);transition:inherit}.v-progress-linear--reverse .v-progress-linear__stream{-webkit-animation:stream-rtl .25s linear infinite;animation:stream-rtl .25s linear infinite;left:-8px;right:auto}.v-progress-linear__wrapper{overflow:hidden;position:relative;transition:inherit}.v-progress-linear--absolute,.v-progress-linear--fixed{left:0;z-index:1}.v-progress-linear--absolute{position:absolute}.v-progress-linear--fixed{position:fixed}.v-progress-linear--reactive .v-progress-linear__content{pointer-events:none}.v-progress-linear--rounded{border-radius:4px}.v-progress-linear--striped .v-progress-linear__determinate{background-image:linear-gradient(135deg,hsla(0,0%,100%,.25) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.25) 0,hsla(0,0%,100%,.25) 75%,transparent 0,transparent);background-size:40px 40px;background-repeat:repeat}.v-progress-linear--query .v-progress-linear__indeterminate--active .long{-webkit-animation-name:query-ltr;animation-name:query-ltr;-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.v-progress-linear--query .v-progress-linear__indeterminate--active .short{-webkit-animation-name:query-short-ltr;animation-name:query-short-ltr;-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.v-progress-linear--query.v-progress-linear--reverse .v-progress-linear__indeterminate--active .long{-webkit-animation-name:query-rtl;animation-name:query-rtl}.v-progress-linear--query.v-progress-linear--reverse .v-progress-linear__indeterminate--active .short{-webkit-animation-name:query-short-rtl;animation-name:query-short-rtl}@-webkit-keyframes indeterminate-ltr{0%{left:-90%;right:100%}60%{left:-90%;right:100%}to{left:100%;right:-35%}}@keyframes indeterminate-ltr{0%{left:-90%;right:100%}60%{left:-90%;right:100%}to{left:100%;right:-35%}}@-webkit-keyframes indeterminate-rtl{0%{left:100%;right:-90%}60%{left:100%;right:-90%}to{left:-35%;right:100%}}@keyframes indeterminate-rtl{0%{left:100%;right:-90%}60%{left:100%;right:-90%}to{left:-35%;right:100%}}@-webkit-keyframes indeterminate-short-ltr{0%{left:-200%;right:100%}60%{left:107%;right:-8%}to{left:107%;right:-8%}}@keyframes indeterminate-short-ltr{0%{left:-200%;right:100%}60%{left:107%;right:-8%}to{left:107%;right:-8%}}@-webkit-keyframes indeterminate-short-rtl{0%{left:100%;right:-200%}60%{left:-8%;right:107%}to{left:-8%;right:107%}}@keyframes indeterminate-short-rtl{0%{left:100%;right:-200%}60%{left:-8%;right:107%}to{left:-8%;right:107%}}@-webkit-keyframes query-ltr{0%{right:-90%;left:100%}60%{right:-90%;left:100%}to{right:100%;left:-35%}}@keyframes query-ltr{0%{right:-90%;left:100%}60%{right:-90%;left:100%}to{right:100%;left:-35%}}@-webkit-keyframes query-rtl{0%{right:100%;left:-90%}60%{right:100%;left:-90%}to{right:-35%;left:100%}}@keyframes query-rtl{0%{right:100%;left:-90%}60%{right:100%;left:-90%}to{right:-35%;left:100%}}@-webkit-keyframes query-short-ltr{0%{right:-200%;left:100%}60%{right:107%;left:-8%}to{right:107%;left:-8%}}@keyframes query-short-ltr{0%{right:-200%;left:100%}60%{right:107%;left:-8%}to{right:107%;left:-8%}}@-webkit-keyframes query-short-rtl{0%{right:100%;left:-200%}60%{right:-8%;left:107%}to{right:-8%;left:107%}}@keyframes query-short-rtl{0%{right:100%;left:-200%}60%{right:-8%;left:107%}to{right:-8%;left:107%}}@-webkit-keyframes stream-ltr{to{transform:translateX(-8px)}}@keyframes stream-ltr{to{transform:translateX(-8px)}}@-webkit-keyframes stream-rtl{to{transform:translateX(8px)}}@keyframes stream-rtl{to{transform:translateX(8px)}}", ""]);
+// Exports
+module.exports = exports;
 
 
 /***/ }),
@@ -2524,6 +2566,22 @@ module.exports = !nativeAssign || fails(function () {
 
 /***/ }),
 
+/***/ "615b":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("b6b0");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("00f9175a", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "62da":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2998,6 +3056,22 @@ module.exports = function (CONSTRUCTOR_NAME, wrapper, common) {
   return Constructor;
 };
 
+
+/***/ }),
+
+/***/ "6ece":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("298f");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("601a32f1", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -4175,6 +4249,46 @@ $({ target: 'Array', proto: true, forced: ES3_STRINGS || !STRICT_METHOD }, {
 
 /***/ }),
 
+/***/ "a2bf":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var isArray = __webpack_require__("e8b5");
+var toLength = __webpack_require__("50c4");
+var bind = __webpack_require__("0366");
+
+// `FlattenIntoArray` abstract operation
+// https://tc39.github.io/proposal-flatMap/#sec-FlattenIntoArray
+var flattenIntoArray = function (target, original, source, sourceLen, start, depth, mapper, thisArg) {
+  var targetIndex = start;
+  var sourceIndex = 0;
+  var mapFn = mapper ? bind(mapper, thisArg, 3) : false;
+  var element;
+
+  while (sourceIndex < sourceLen) {
+    if (sourceIndex in source) {
+      element = mapFn ? mapFn(source[sourceIndex], sourceIndex, original) : source[sourceIndex];
+
+      if (depth > 0 && isArray(element)) {
+        targetIndex = flattenIntoArray(target, original, element, toLength(element.length), targetIndex, depth - 1) - 1;
+      } else {
+        if (targetIndex >= 0x1FFFFFFFFFFFFF) throw TypeError('Exceed the acceptable array length');
+        target[targetIndex] = element;
+      }
+
+      targetIndex++;
+    }
+    sourceIndex++;
+  }
+  return targetIndex;
+};
+
+module.exports = flattenIntoArray;
+
+
+/***/ }),
+
 /***/ "a4b4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5101,6 +5215,20 @@ $({ target: 'Number', proto: true, forced: FORCED }, {
     } return result;
   }
 });
+
+
+/***/ }),
+
+/***/ "b6b0":
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".theme--light.v-card{background-color:#fff;color:rgba(0,0,0,.87)}.theme--light.v-card .v-card__subtitle,.theme--light.v-card>.v-card__text{color:rgba(0,0,0,.6)}.theme--dark.v-card{background-color:#1e1e1e;color:#fff}.theme--dark.v-card .v-card__subtitle,.theme--dark.v-card>.v-card__text{color:hsla(0,0%,100%,.7)}.v-sheet.v-card{border-radius:4px}.v-sheet.v-card:not(.v-sheet--outlined){box-shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.v-sheet.v-card.v-sheet--shaped{border-radius:24px 4px}.v-card{border-width:thin;display:block;max-width:100%;outline:none;text-decoration:none;transition-property:box-shadow,opacity;overflow-wrap:break-word;position:relative;white-space:normal}.v-card>.v-card__progress+:not(.v-btn):not(.v-chip),.v-card>:first-child:not(.v-btn):not(.v-chip){border-top-left-radius:inherit;border-top-right-radius:inherit}.v-card>:last-child:not(.v-btn):not(.v-chip){border-bottom-left-radius:inherit;border-bottom-right-radius:inherit}.v-card__progress{top:0;left:0;right:0;overflow:hidden}.v-card__subtitle+.v-card__text{padding-top:0}.v-card__subtitle,.v-card__text{font-size:.875rem;font-weight:400;line-height:1.375rem;letter-spacing:.0071428571em}.v-card__subtitle,.v-card__text,.v-card__title{padding:16px}.v-card__title{align-items:center;display:flex;flex-wrap:wrap;font-size:1.25rem;font-weight:500;letter-spacing:.0125em;line-height:2rem;word-break:break-all}.v-card__title+.v-card__subtitle,.v-card__title+.v-card__text{padding-top:0}.v-card__title+.v-card__subtitle{margin-top:-16px}.v-card__text{width:100%}.v-card__actions{align-items:center;display:flex;padding:8px}.v-card__actions>.v-btn.v-btn{padding:0 8px}.v-application--is-ltr .v-card__actions>.v-btn.v-btn+.v-btn{margin-left:8px}.v-application--is-ltr .v-card__actions>.v-btn.v-btn .v-icon--left{margin-left:4px}.v-application--is-ltr .v-card__actions>.v-btn.v-btn .v-icon--right{margin-right:4px}.v-application--is-rtl .v-card__actions>.v-btn.v-btn+.v-btn{margin-right:8px}.v-application--is-rtl .v-card__actions>.v-btn.v-btn .v-icon--left{margin-right:4px}.v-application--is-rtl .v-card__actions>.v-btn.v-btn .v-icon--right{margin-left:4px}.v-card--flat{box-shadow:0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12)!important}.v-sheet.v-card--hover{cursor:pointer;transition:box-shadow .4s cubic-bezier(.25,.8,.25,1)}.v-sheet.v-card--hover:focus,.v-sheet.v-card--hover:hover{box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)}.v-card--link,.v-card--link .v-chip{cursor:pointer}.v-card--link:focus:before{opacity:.08}.v-card--link:before{background:currentColor;bottom:0;content:\"\";left:0;opacity:0;pointer-events:none;position:absolute;right:0;top:0;transition:opacity .2s}.v-card--disabled{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.v-card--disabled>:not(.v-card__progress){opacity:.6;transition:inherit}.v-card--loading{overflow:hidden}.v-card--raised{box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)}", ""]);
+// Exports
+module.exports = exports;
 
 
 /***/ }),
@@ -6876,14 +7004,14 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"aeff6b9e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=df1c4588&
-var Appvue_type_template_id_df1c4588_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-main',[_c('v-btn',{attrs:{"color":"success"}},[_vm._v("JE SUIS UN VBUTTON")]),_c('HelloWorld')],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"65d764ab-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=f5e1dae4&
+var Appvue_type_template_id_f5e1dae4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-main',[_c('v-btn',{attrs:{"color":"success"}},[_vm._v("JE SUIS UN VBUTTON")]),_c('v-card',[_vm._v(" Je suis une card ")]),_c('HelloWorld')],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=df1c4588&
+// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=f5e1dae4&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"aeff6b9e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HelloWorld.vue?vue&type=template&id=08f729da&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"65d764ab-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HelloWorld.vue?vue&type=template&id=08f729da&
 var HelloWorldvue_type_template_id_08f729da_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-container',[_c('v-row',{staticClass:"text-center"},[_c('v-col',{attrs:{"cols":"12"}},[_c('v-img',{staticClass:"my-3",attrs:{"src":__webpack_require__("9b19"),"contain":"","height":"200"}})],1),_c('v-col',{staticClass:"mb-4"},[_c('h1',{staticClass:"display-2 font-weight-bold mb-3"},[_vm._v("Welcome to Vuetify")]),_c('p',{staticClass:"subheading font-weight-regular"},[_vm._v(" For help and collaboration with other Vuetify developers, "),_c('br'),_vm._v("please join our online "),_c('a',{attrs:{"href":"https://community.vuetifyjs.com","target":"_blank"}},[_vm._v("Discord Community")])])]),_c('v-col',{staticClass:"mb-5",attrs:{"cols":"12"}},[_c('h2',{staticClass:"headline font-weight-bold mb-3"},[_vm._v("What's next?")]),_c('v-row',{attrs:{"justify":"center"}},_vm._l((_vm.whatsNext),function(next,i){return _c('a',{key:i,staticClass:"subheading mx-3",attrs:{"href":next.href,"target":"_blank"}},[_vm._v(" "+_vm._s(next.text)+" ")])}),0)],1),_c('v-col',{staticClass:"mb-5",attrs:{"cols":"12"}},[_c('h2',{staticClass:"headline font-weight-bold mb-3"},[_vm._v("Important Links")]),_c('v-row',{attrs:{"justify":"center"}},_vm._l((_vm.importantLinks),function(link,i){return _c('a',{key:i,staticClass:"subheading mx-3",attrs:{"href":link.href,"target":"_blank"}},[_vm._v(" "+_vm._s(link.text)+" ")])}),0)],1),_c('v-col',{staticClass:"mb-5",attrs:{"cols":"12"}},[_c('h2',{staticClass:"headline font-weight-bold mb-3"},[_vm._v("Ecosystem")]),_c('v-row',{attrs:{"justify":"center"}},_vm._l((_vm.ecosystem),function(eco,i){return _c('a',{key:i,staticClass:"subheading mx-3",attrs:{"href":eco.href,"target":"_blank"}},[_vm._v(" "+_vm._s(eco.text)+" ")])}),0)],1)],1)],1)}
 var HelloWorldvue_type_template_id_08f729da_staticRenderFns = []
 
@@ -11245,6 +11373,7 @@ external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.use(framework_Vue
 //
 //
 //
+//
 
 
 /* harmony default export */ var Appvue_type_script_lang_js_ = ({
@@ -12503,6 +12632,609 @@ var baseMixins = mixins(components_VSheet, routable, positionable, sizeable, fac
     return h(tag, this.disabled ? data : setColor(this.color, data), children);
   }
 }));
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.flat.js
+var es_array_flat = __webpack_require__("0481");
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VCard/VCard.sass
+var VCard = __webpack_require__("615b");
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass
+var VProgressLinear = __webpack_require__("6ece");
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/createTransition.js
+
+
+
+function mergeTransitions() {
+  var _Array;
+
+  var dest = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+  for (var _len = arguments.length, transitions = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    transitions[_key - 1] = arguments[_key];
+  }
+
+  /* eslint-disable-next-line no-array-constructor */
+  return (_Array = Array()).concat.apply(_Array, [dest].concat(transitions));
+}
+
+function createSimpleTransition(name) {
+  var origin = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'top center 0';
+  var mode = arguments.length > 2 ? arguments[2] : undefined;
+  return {
+    name: name,
+    functional: true,
+    props: {
+      group: {
+        type: Boolean,
+        default: false
+      },
+      hideOnLeave: {
+        type: Boolean,
+        default: false
+      },
+      leaveAbsolute: {
+        type: Boolean,
+        default: false
+      },
+      mode: {
+        type: String,
+        default: mode
+      },
+      origin: {
+        type: String,
+        default: origin
+      }
+    },
+    render: function render(h, context) {
+      var tag = "transition".concat(context.props.group ? '-group' : '');
+      var data = {
+        props: {
+          name: name,
+          mode: context.props.mode
+        },
+        on: {
+          beforeEnter: function beforeEnter(el) {
+            el.style.transformOrigin = context.props.origin;
+            el.style.webkitTransformOrigin = context.props.origin;
+          }
+        }
+      };
+
+      if (context.props.leaveAbsolute) {
+        data.on.leave = mergeTransitions(data.on.leave, function (el) {
+          return el.style.position = 'absolute';
+        });
+      }
+
+      if (context.props.hideOnLeave) {
+        data.on.leave = mergeTransitions(data.on.leave, function (el) {
+          return el.style.display = 'none';
+        });
+      }
+
+      return h(tag, mergeData(context.data, data), context.children);
+    }
+  };
+}
+function createJavascriptTransition(name, functions) {
+  var mode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'in-out';
+  return {
+    name: name,
+    functional: true,
+    props: {
+      mode: {
+        type: String,
+        default: mode
+      }
+    },
+    render: function render(h, context) {
+      return h('transition', mergeData(context.data, {
+        props: {
+          name: name
+        },
+        on: functions
+      }), context.children);
+    }
+  };
+}
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/expand-transition.js
+
+
+/* harmony default export */ var expand_transition = (function () {
+  var expandedParentClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  var x = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var sizeProperty = x ? 'width' : 'height';
+  var offsetProperty = "offset".concat(upperFirst(sizeProperty));
+  return {
+    beforeEnter: function beforeEnter(el) {
+      el._parent = el.parentNode;
+      el._initialStyle = _defineProperty({
+        transition: el.style.transition,
+        overflow: el.style.overflow
+      }, sizeProperty, el.style[sizeProperty]);
+    },
+    enter: function enter(el) {
+      var initialStyle = el._initialStyle;
+      el.style.setProperty('transition', 'none', 'important'); // Hide overflow to account for collapsed margins in the calculated height
+
+      el.style.overflow = 'hidden';
+      var offset = "".concat(el[offsetProperty], "px");
+      el.style[sizeProperty] = '0';
+      void el.offsetHeight; // force reflow
+
+      el.style.transition = initialStyle.transition;
+
+      if (expandedParentClass && el._parent) {
+        el._parent.classList.add(expandedParentClass);
+      }
+
+      requestAnimationFrame(function () {
+        el.style[sizeProperty] = offset;
+      });
+    },
+    afterEnter: resetStyles,
+    enterCancelled: resetStyles,
+    leave: function leave(el) {
+      el._initialStyle = _defineProperty({
+        transition: '',
+        overflow: el.style.overflow
+      }, sizeProperty, el.style[sizeProperty]);
+      el.style.overflow = 'hidden';
+      el.style[sizeProperty] = "".concat(el[offsetProperty], "px");
+      void el.offsetHeight; // force reflow
+
+      requestAnimationFrame(function () {
+        return el.style[sizeProperty] = '0';
+      });
+    },
+    afterLeave: afterLeave,
+    leaveCancelled: afterLeave
+  };
+
+  function afterLeave(el) {
+    if (expandedParentClass && el._parent) {
+      el._parent.classList.remove(expandedParentClass);
+    }
+
+    resetStyles(el);
+  }
+
+  function resetStyles(el) {
+    var size = el._initialStyle[sizeProperty];
+    el.style.overflow = el._initialStyle.overflow;
+    if (size != null) el.style[sizeProperty] = size;
+    delete el._initialStyle;
+  }
+});
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/transitions/index.js
+
+ // Component specific transitions
+
+var VCarouselTransition = createSimpleTransition('carousel-transition');
+var VCarouselReverseTransition = createSimpleTransition('carousel-reverse-transition');
+var VTabTransition = createSimpleTransition('tab-transition');
+var VTabReverseTransition = createSimpleTransition('tab-reverse-transition');
+var VMenuTransition = createSimpleTransition('menu-transition');
+var VFabTransition = createSimpleTransition('fab-transition', 'center center', 'out-in'); // Generic transitions
+
+var VDialogTransition = createSimpleTransition('dialog-transition');
+var VDialogBottomTransition = createSimpleTransition('dialog-bottom-transition');
+var VDialogTopTransition = createSimpleTransition('dialog-top-transition');
+var VFadeTransition = createSimpleTransition('fade-transition');
+var VScaleTransition = createSimpleTransition('scale-transition');
+var VScrollXTransition = createSimpleTransition('scroll-x-transition');
+var VScrollXReverseTransition = createSimpleTransition('scroll-x-reverse-transition');
+var VScrollYTransition = createSimpleTransition('scroll-y-transition');
+var VScrollYReverseTransition = createSimpleTransition('scroll-y-reverse-transition');
+var VSlideXTransition = createSimpleTransition('slide-x-transition');
+var VSlideXReverseTransition = createSimpleTransition('slide-x-reverse-transition');
+var VSlideYTransition = createSimpleTransition('slide-y-transition');
+var VSlideYReverseTransition = createSimpleTransition('slide-y-reverse-transition'); // Javascript transitions
+
+var VExpandTransition = createJavascriptTransition('expand-transition', expand_transition());
+var VExpandXTransition = createJavascriptTransition('expand-x-transition', expand_transition('', true));
+/* harmony default export */ var transitions = ({
+  $_vuetify_subcomponents: {
+    VCarouselTransition: VCarouselTransition,
+    VCarouselReverseTransition: VCarouselReverseTransition,
+    VDialogTransition: VDialogTransition,
+    VDialogBottomTransition: VDialogBottomTransition,
+    VDialogTopTransition: VDialogTopTransition,
+    VFabTransition: VFabTransition,
+    VFadeTransition: VFadeTransition,
+    VMenuTransition: VMenuTransition,
+    VScaleTransition: VScaleTransition,
+    VScrollXTransition: VScrollXTransition,
+    VScrollXReverseTransition: VScrollXReverseTransition,
+    VScrollYTransition: VScrollYTransition,
+    VScrollYReverseTransition: VScrollYReverseTransition,
+    VSlideXTransition: VSlideXTransition,
+    VSlideXReverseTransition: VSlideXReverseTransition,
+    VSlideYTransition: VSlideYTransition,
+    VSlideYReverseTransition: VSlideYReverseTransition,
+    VTabReverseTransition: VTabReverseTransition,
+    VTabTransition: VTabTransition,
+    VExpandTransition: VExpandTransition,
+    VExpandXTransition: VExpandXTransition
+  }
+});
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/proxyable/index.js
+
+
+function proxyable_factory() {
+  var prop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'value';
+  var event = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'change';
+  return external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend({
+    name: 'proxyable',
+    model: {
+      prop: prop,
+      event: event
+    },
+    props: _defineProperty({}, prop, {
+      required: false
+    }),
+    data: function data() {
+      return {
+        internalLazyValue: this[prop]
+      };
+    },
+    computed: {
+      internalValue: {
+        get: function get() {
+          return this.internalLazyValue;
+        },
+        set: function set(val) {
+          if (val === this.internalLazyValue) return;
+          this.internalLazyValue = val;
+          this.$emit(event, val);
+        }
+      }
+    },
+    watch: _defineProperty({}, prop, function (val) {
+      this.internalLazyValue = val;
+    })
+  });
+}
+/* eslint-disable-next-line @typescript-eslint/no-redeclare */
+
+var Proxyable = proxyable_factory();
+/* harmony default export */ var proxyable = (Proxyable);
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/VProgressLinear.js
+
+
+
+
+ // Components
+
+ // Mixins
+
+
+
+
+ // Utilities
+
+
+
+var VProgressLinear_baseMixins = mixins(colorable, positionable_factory(['absolute', 'fixed', 'top', 'bottom']), proxyable, themeable);
+/* @vue/component */
+
+/* harmony default export */ var VProgressLinear_VProgressLinear = (VProgressLinear_baseMixins.extend({
+  name: 'v-progress-linear',
+  props: {
+    active: {
+      type: Boolean,
+      default: true
+    },
+    backgroundColor: {
+      type: String,
+      default: null
+    },
+    backgroundOpacity: {
+      type: [Number, String],
+      default: null
+    },
+    bufferValue: {
+      type: [Number, String],
+      default: 100
+    },
+    color: {
+      type: String,
+      default: 'primary'
+    },
+    height: {
+      type: [Number, String],
+      default: 4
+    },
+    indeterminate: Boolean,
+    query: Boolean,
+    reverse: Boolean,
+    rounded: Boolean,
+    stream: Boolean,
+    striped: Boolean,
+    value: {
+      type: [Number, String],
+      default: 0
+    }
+  },
+  data: function data() {
+    return {
+      internalLazyValue: this.value || 0
+    };
+  },
+  computed: {
+    __cachedBackground: function __cachedBackground() {
+      return this.$createElement('div', this.setBackgroundColor(this.backgroundColor || this.color, {
+        staticClass: 'v-progress-linear__background',
+        style: this.backgroundStyle
+      }));
+    },
+    __cachedBar: function __cachedBar() {
+      return this.$createElement(this.computedTransition, [this.__cachedBarType]);
+    },
+    __cachedBarType: function __cachedBarType() {
+      return this.indeterminate ? this.__cachedIndeterminate : this.__cachedDeterminate;
+    },
+    __cachedBuffer: function __cachedBuffer() {
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__buffer',
+        style: this.styles
+      });
+    },
+    __cachedDeterminate: function __cachedDeterminate() {
+      return this.$createElement('div', this.setBackgroundColor(this.color, {
+        staticClass: "v-progress-linear__determinate",
+        style: {
+          width: convertToUnit(this.normalizedValue, '%')
+        }
+      }));
+    },
+    __cachedIndeterminate: function __cachedIndeterminate() {
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__indeterminate',
+        class: {
+          'v-progress-linear__indeterminate--active': this.active
+        }
+      }, [this.genProgressBar('long'), this.genProgressBar('short')]);
+    },
+    __cachedStream: function __cachedStream() {
+      if (!this.stream) return null;
+      return this.$createElement('div', this.setTextColor(this.color, {
+        staticClass: 'v-progress-linear__stream',
+        style: {
+          width: convertToUnit(100 - this.normalizedBuffer, '%')
+        }
+      }));
+    },
+    backgroundStyle: function backgroundStyle() {
+      var _ref;
+
+      var backgroundOpacity = this.backgroundOpacity == null ? this.backgroundColor ? 1 : 0.3 : parseFloat(this.backgroundOpacity);
+      return _ref = {
+        opacity: backgroundOpacity
+      }, _defineProperty(_ref, this.isReversed ? 'right' : 'left', convertToUnit(this.normalizedValue, '%')), _defineProperty(_ref, "width", convertToUnit(this.normalizedBuffer - this.normalizedValue, '%')), _ref;
+    },
+    classes: function classes() {
+      return _objectSpread2({
+        'v-progress-linear--absolute': this.absolute,
+        'v-progress-linear--fixed': this.fixed,
+        'v-progress-linear--query': this.query,
+        'v-progress-linear--reactive': this.reactive,
+        'v-progress-linear--reverse': this.isReversed,
+        'v-progress-linear--rounded': this.rounded,
+        'v-progress-linear--striped': this.striped
+      }, this.themeClasses);
+    },
+    computedTransition: function computedTransition() {
+      return this.indeterminate ? VFadeTransition : VSlideXTransition;
+    },
+    isReversed: function isReversed() {
+      return this.$vuetify.rtl !== this.reverse;
+    },
+    normalizedBuffer: function normalizedBuffer() {
+      return this.normalize(this.bufferValue);
+    },
+    normalizedValue: function normalizedValue() {
+      return this.normalize(this.internalLazyValue);
+    },
+    reactive: function reactive() {
+      return Boolean(this.$listeners.change);
+    },
+    styles: function styles() {
+      var styles = {};
+
+      if (!this.active) {
+        styles.height = 0;
+      }
+
+      if (!this.indeterminate && parseFloat(this.normalizedBuffer) !== 100) {
+        styles.width = convertToUnit(this.normalizedBuffer, '%');
+      }
+
+      return styles;
+    }
+  },
+  methods: {
+    genContent: function genContent() {
+      var slot = getSlot(this, 'default', {
+        value: this.internalLazyValue
+      });
+      if (!slot) return null;
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__content'
+      }, slot);
+    },
+    genListeners: function genListeners() {
+      var listeners = this.$listeners;
+
+      if (this.reactive) {
+        listeners.click = this.onClick;
+      }
+
+      return listeners;
+    },
+    genProgressBar: function genProgressBar(name) {
+      return this.$createElement('div', this.setBackgroundColor(this.color, {
+        staticClass: 'v-progress-linear__indeterminate',
+        class: _defineProperty({}, name, true)
+      }));
+    },
+    onClick: function onClick(e) {
+      if (!this.reactive) return;
+
+      var _this$$el$getBounding = this.$el.getBoundingClientRect(),
+          width = _this$$el$getBounding.width;
+
+      this.internalValue = e.offsetX / width * 100;
+    },
+    normalize: function normalize(value) {
+      if (value < 0) return 0;
+      if (value > 100) return 100;
+      return parseFloat(value);
+    }
+  },
+  render: function render(h) {
+    var data = {
+      staticClass: 'v-progress-linear',
+      attrs: {
+        role: 'progressbar',
+        'aria-valuemin': 0,
+        'aria-valuemax': this.normalizedBuffer,
+        'aria-valuenow': this.indeterminate ? undefined : this.normalizedValue
+      },
+      class: this.classes,
+      style: {
+        bottom: this.bottom ? 0 : undefined,
+        height: this.active ? convertToUnit(this.height) : 0,
+        top: this.top ? 0 : undefined
+      },
+      on: this.genListeners()
+    };
+    return h('div', data, [this.__cachedStream, this.__cachedBackground, this.__cachedBuffer, this.__cachedBar, this.genContent()]);
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/index.js
+
+
+/* harmony default export */ var components_VProgressLinear = (VProgressLinear_VProgressLinear);
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/loadable/index.js
+
+
+
+/**
+ * Loadable
+ *
+ * @mixin
+ *
+ * Used to add linear progress bar to components
+ * Can use a default bar with a specific color
+ * or designate a custom progress linear bar
+ */
+
+/* @vue/component */
+
+/* harmony default export */ var loadable = (external_commonjs_vue_commonjs2_vue_root_Vue_amd_vue_default.a.extend().extend({
+  name: 'loadable',
+  props: {
+    loading: {
+      type: [Boolean, String],
+      default: false
+    },
+    loaderHeight: {
+      type: [Number, String],
+      default: 2
+    }
+  },
+  methods: {
+    genProgress: function genProgress() {
+      if (this.loading === false) return null;
+      return this.$slots.progress || this.$createElement(components_VProgressLinear, {
+        props: {
+          absolute: true,
+          color: this.loading === true || this.loading === '' ? this.color || 'primary' : this.loading,
+          height: this.loaderHeight,
+          indeterminate: true
+        }
+      });
+    }
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/VCard.js
+
+
+
+// Styles
+ // Extensions
+
+ // Mixins
+
+
+ // Helpers
+
+
+/* @vue/component */
+
+/* harmony default export */ var VCard_VCard = (mixins(loadable, routable, components_VSheet).extend({
+  name: 'v-card',
+  props: {
+    flat: Boolean,
+    hover: Boolean,
+    img: String,
+    link: Boolean,
+    loaderHeight: {
+      type: [Number, String],
+      default: 4
+    },
+    raised: Boolean
+  },
+  computed: {
+    classes: function classes() {
+      return _objectSpread2(_objectSpread2({
+        'v-card': true
+      }, routable.options.computed.classes.call(this)), {}, {
+        'v-card--flat': this.flat,
+        'v-card--hover': this.hover,
+        'v-card--link': this.isClickable,
+        'v-card--loading': this.loading,
+        'v-card--disabled': this.disabled,
+        'v-card--raised': this.raised
+      }, components_VSheet.options.computed.classes.call(this));
+    },
+    styles: function styles() {
+      var style = _objectSpread2({}, components_VSheet.options.computed.styles.call(this));
+
+      if (this.img) {
+        style.background = "url(\"".concat(this.img, "\") center center / cover no-repeat");
+      }
+
+      return style;
+    }
+  },
+  methods: {
+    genProgress: function genProgress() {
+      var render = loadable.options.methods.genProgress.call(this);
+      if (!render) return null;
+      return this.$createElement('div', {
+        staticClass: 'v-card__progress',
+        key: 'progress'
+      }, [render]);
+    }
+  },
+  render: function render(h) {
+    var _this$generateRouteLi = this.generateRouteLink(),
+        tag = _this$generateRouteLi.tag,
+        data = _this$generateRouteLi.data;
+
+    data.style = this.styles;
+
+    if (this.isClickable) {
+      data.attrs = data.attrs || {};
+      data.attrs.tabindex = 0;
+    }
+
+    return h(tag, this.setBackgroundColor(this.color, data), [this.genProgress(), this.$slots.default]);
+  }
+}));
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VMain/VMain.sass
 var VMain = __webpack_require__("bd0c");
 
@@ -12591,7 +13323,7 @@ var VMain = __webpack_require__("bd0c");
 
 var App_component = normalizeComponent(
   src_Appvue_type_script_lang_js_,
-  Appvue_type_template_id_df1c4588_render,
+  Appvue_type_template_id_f5e1dae4_render,
   staticRenderFns,
   false,
   null,
@@ -12606,7 +13338,8 @@ var App_component = normalizeComponent(
 
 
 
-installComponents_default()(App_component, {VBtn: VBtn_VBtn,VMain: VMain_VMain})
+
+installComponents_default()(App_component, {VBtn: VBtn_VBtn,VCard: VCard_VCard,VMain: VMain_VMain})
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 

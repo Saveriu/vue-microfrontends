@@ -1,6 +1,7 @@
 <template>
   <v-main>
     <v-btn color="success">JE SUIS UN VBUTTON</v-btn>
+    <v-card> Je suis une card </v-card>
     <HelloWorld />
   </v-main>
 </template>
