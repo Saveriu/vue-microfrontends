@@ -1,27 +1,20 @@
 <template>
-  <v-app>
-    <h2>Complex APP</h2>
-    <v-card height="400">
-      <v-btn @click="increment" color="accent">A VBUTTON</v-btn>
-      A VCARD {{ cp }}
-      <v-select label="Palette" :items="['item1', 'item2']" dense></v-select>
-    </v-card>
-  </v-app>
+  <v-card height="400">
+    <v-card-title> Complex APP (vuex, vue-router, vuetify)</v-card-title>
+    <v-card-text>
+      <v-btn @click="increment" color="accent">A VBUTTON {{ cp }}</v-btn>
+      <h2>A select</h2>
+      <v-select label="Slect" :items="['item1', 'item2']" dense></v-select>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
-import vuetify from "./plugins/vuetify";
-// import router from "./router";
-// import store from "./store";
-
 export default {
-  // store,
-  // router,
-  vuetify,
   props: {
     storeId: {
       type: String,
-      default: () => "standAloneMicroApp2",
+      default: () => "standAloneApp2",
     },
   },
   computed: {
@@ -37,8 +30,6 @@ export default {
     },
   },
   created() {
-    console.debug("Loading complex APP");
-    console.log(this.$store);
     if (this.$store.state[this.storeId]) {
       this.$store.unregisterModule(this.storeId);
     }

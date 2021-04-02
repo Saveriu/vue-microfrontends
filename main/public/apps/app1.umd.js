@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["micro-app1"] = factory();
+		exports["app1"] = factory();
 	else
-		root["micro-app1"] = factory();
+		root["app1"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -212,15 +212,14 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"14f6704a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=6bae5d81&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('main',[_c('h2',[_vm._v("Simple APP")]),_c('button',{on:{"click":function($event){_vm.cp++}}},[_vm._v("A BUTTON")]),_c('div',[_vm._v("A DIV "+_vm._s(_vm.cp))])])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"14f6704a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=13522d96&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('main',[_c('h2',[_vm._v("Simple APP (no vuex, no vue-router, no vuetify)")]),_c('button',{attrs:{"type":"button"},on:{"click":function($event){_vm.cp++}}},[_vm._v("A BUTTON "+_vm._s(_vm.cp))])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=6bae5d81&
+// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=13522d96&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=script&lang=js&
-//
 //
 //
 //
@@ -371,4 +370,4 @@ var component = normalizeComponent(
 
 /******/ })["default"];
 });
-//# sourceMappingURL=micro-app1.umd.js.map
+//# sourceMappingURL=app1.umd.js.map

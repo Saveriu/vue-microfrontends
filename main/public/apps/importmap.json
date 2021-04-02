@@ -1,6 +1,10 @@
 {
   "imports": {
-    "@saveriu/microApp1": "//localhost:8080/apps/micro-app1.umd.js",
-    "@saveriu/microApp2": "//localhost:8080/apps/micro-app2.umd.js"
+    "vue": "https://unpkg.com/vue",
+    "vue-router": "https://unpkg.com/vue-router",
+    "vuex": "https://unpkg.com/vuex",
+    "vuetify": "https://unpkg.com/vuetify",
+    "@saveriu/app1": "//localhost:8080/apps/app1.umd.js",
+    "@saveriu/app2": "//localhost:8080/apps/app2.umd.js"
   }
 }

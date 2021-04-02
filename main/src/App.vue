@@ -17,15 +17,17 @@
       <template #extension>
         <v-tabs align-with-title>
           <v-tab to="/">Main</v-tab>
-          <v-tab to="/apps/microApp1">Micro App 1</v-tab>
-          <v-tab to="/apps/microApp2">Micro App 2</v-tab>
+          <v-tab to="/external-apps/app1">External App 1</v-tab>
+          <v-tab to="/external-apps/app2">External App 2</v-tab>
         </v-tabs>
         <v-divider></v-divider>
         <v-btn color="success" @click="storeAction">GLOBAL ACTION!</v-btn>
       </template>
     </v-app-bar>
 
-    <v-main><router-view> </router-view> </v-main>
+    <v-main>
+      <router-view> </router-view>
+    </v-main>
   </v-app>
 </template>
 

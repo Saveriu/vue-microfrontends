@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name micro-app2",
-    "postlib": "copy dist\\micro-app2.umd.js ..\\main\\public\\apps\\"
+    "lib": "vue-cli-service build --target lib --name app2 src/EmbeddedApp.vue",
+    "postlib": "copy dist\\app2.umd.js ..\\main\\public\\apps\\"
   },
   "dependencies": {
     "core-js": "^3.10.0",

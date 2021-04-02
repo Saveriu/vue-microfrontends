@@ -1,15 +1,11 @@
 <template>
   <v-card>
     <v-card-title>
-      {{ microAppId }} container with inner state:{{ innerState }}
+      container of {{ appId }} with inner state:{{ innerState }}
     </v-card-title>
 
-    <v-card style="border: 2px dotted red">
-      <component
-        :is="microAppComponent"
-        :storeId="microAppId"
-        :key="microAppId"
-      />
+    <v-card style="border: 4px dashed #ff4081 ">
+      <component :is="appComponent" :storeId="appId" />
     </v-card>
   </v-card>
 </template>
@@ -18,39 +14,39 @@
 
 export default {
   props: {
-    microAppId: {
+    appId: {
       type: String,
       required: true,
     },
   },
   data: () => ({
-    microAppComponent: null,
+    appComponent: null,
   }),
   computed: {
     innerState() {
-      return this.$store.state[this.microAppId];
+      return this.$store.state[this.appId];
     },
   },
-  async updated() {
-    await this.loadMicroApp();
+  watch: {
+    async appId(newVal,oldVal) {
+      await this.loadMicroApp();
+    }
   },
   async created() {
     await this.loadMicroApp();
   },
   methods: {
     async loadMicroApp() {
-
-    console.log("Pull Application", this.microAppId)
-      try {
-        //eslint-disable-next-line
-        this.microAppComponent = await System.import(`@saveriu/${this.microAppId}`);
-        // this.microAppComponent = await window.System.import(`@olea/${this.microAppId}`);
-        console.log("App pulled!")
+      console.debug("Pull Application", this.appId)
+        try {
+          //eslint-disable-next-line
+          this.appComponent = await System.import(`@saveriu/${this.appId}`);
+          console.log("App pulled!");
+        }
+        catch(e) {
+          this.appComponent = null;
+          console.error(e);
       }
-      catch(e) {
-        this.microAppComponent = null
-        console.error(e)
-    }
     }
   }
 };

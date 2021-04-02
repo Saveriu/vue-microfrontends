@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import AppContainer from "@/views/AppContainer.vue";
+import InternalAppContainer from "@/views/InternalAppContainer.vue";
 
 Vue.use(VueRouter);
 
@@ -12,11 +13,9 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
-    path: "/apps/:appId",
+    path: "/external-apps/:appId",
     name: "App",
-    props: (route) => ({
-      microAppId: route.params.appId,
-    }),
+    props: true,
     component: AppContainer,
   },
 ];

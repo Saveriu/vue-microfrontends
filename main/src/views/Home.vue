@@ -1,8 +1,18 @@
 <template>
   <v-card>
     <v-card-title>Main App</v-card-title>
-    global state:
-    {{ globalState }}
+    <v-card>
+      <v-card-title primary-title>
+        Global State: {{ globalState }}
+      </v-card-title>
+    </v-card>
+    <v-card class="pa-10">
+      <v-card-title primary-title>
+        Vuetify Form
+      </v-card-title>
+      <v-select label="Select" :items="['item1', 'item2']" dense></v-select>
+      <v-slider v-model="value" step="0"></v-slider>
+    </v-card>
   </v-card>
 </template>
 

@@ -6,10 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name micro-app1",
-    "postlib": "copy dist\\micro-app1.umd.js ..\\main\\public\\apps\\",
-    "postwc": "copy dist\\micro-app1.js ..\\main\\public\\apps\\",
-    "wc": "vue-cli-service build --target wc --name micro-app1"
+    "lib": "vue-cli-service build --target lib --name app1",
+    "postlib": "copy dist\\app1.umd.js ..\\main\\public\\apps\\"
   },
   "dependencies": {
     "core-js": "^3.6.5",
