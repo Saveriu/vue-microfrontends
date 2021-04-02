@@ -1,7 +1,7 @@
 <template>
   <v-main>
-    <v-btn color="success">JE SUIS UN VBUTTON</v-btn>
-    <v-card> Je suis une card </v-card>
+    <v-btn color="success" @click="cp++">JE SUIS UN VBUTTON</v-btn>
+    <v-card> Je suis une card {{ cp }}</v-card>
     <HelloWorld />
   </v-main>
 </template>
@@ -20,7 +20,7 @@ export default {
   },
 
   data: () => ({
-    //
+    cp: 0,
   }),
 };
 </script>

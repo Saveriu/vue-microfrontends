@@ -30,12 +30,8 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import store from "./store";
-
-export default Vue.extend({
-  store,
+<script>
+export default {
   name: "App",
   data: () => ({
     //
@@ -48,5 +44,5 @@ export default Vue.extend({
   created() {
     console.debug("Vuetify", this.$vuetify);
   },
-});
+};
 </script>

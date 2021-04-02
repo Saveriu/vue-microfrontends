@@ -1,6 +1,7 @@
 <template>
   <main id="app1">
     <h2>I'm micro-app1 with params: {{ artifactURIs }}</h2>
+    <button @click="cp++">CLICK {{ cp }}</button>
     <app-1-component></app-1-component>
   </main>
 </template>
@@ -13,6 +14,9 @@ export default {
   props: {
     artifactURIs: Array,
   },
+  data: () => ({
+    cp: 0,
+  }),
   async beforeCreate() {
     console.debug("Loading micro-app1");
     this.$store.registerModule("micro-app1", {

@@ -1,5 +1,12 @@
 const path = require("path");
 module.exports = {
+  chainWebpack: (config) => {
+    // config.plugins.delete("prefetch");
+    // config.plugins.delete("preload");
+    // // config.optimization.delete("splitChunks");
+    // config.output.libraryTarget("system");
+    // config.set("devtool", "sourcemap");
+  },
   transpileDependencies: ["vuetify"],
   configureWebpack: {
     // output: {
@@ -20,13 +27,16 @@ module.exports = {
         "Access-Control-Allow-Headers": "*",
       },
     },
+    // optimization: {
+    //   delete: "splitChunks",
+    // },
     // output: {
-    //   libraryTarget: "system",
+    //   libraryTarget: "umd",
     // },
     externals: [
       /^@olea\/.+/,
-      // vue,
       // /^vuetify\/.*/,
+      "vue",
       // {
       //   vue: { commonjs: "vue", commonjs2: "vue", root: "Vue", amd: "vue" },
       //   "vue-router": "vue-router",

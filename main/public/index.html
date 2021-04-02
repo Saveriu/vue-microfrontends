@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
@@ -14,17 +15,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
     />
+
     <meta name="importmap-type" content="systemjs-importmap" />
     <!--I Need to import the 3 scripts individually because systemjs can affect the future imports from Fovia-->
-    <script src="//192.168.0.200:8088/socket.io/socket.io.js"></script>
+    <!-- <script src="//192.168.0.200:8088/socket.io/socket.io.js"></script>
     <script src="//192.168.0.200:8088/scripts/cbor.js"></script>
-    <script src="//192.168.0.200:8088/foviaAPI.js"></script>
+    <script src="//192.168.0.200:8088/foviaAPI.js"></script> -->
 
     <script type="systemjs-importmap" src="/apps/importmap.json"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-register.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/use-default.js"></script>
+    <!-- <script type="module">
+      System.import("vue");
+    </script> -->
   </head>
   <body>
     <noscript>
