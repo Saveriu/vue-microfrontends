@@ -9,7 +9,6 @@ cd app1
 npm run lib
 cd ../app2
 npm run lib
-
 </pre></code>
 
 Run the main app
@@ -17,5 +16,4 @@ Run the main app
 <code><pre>
 cd ../main
 npm run serve
-
 </pre></code>
