@@ -1,12 +1,12 @@
 const path = require("path");
 module.exports = {
-  chainWebpack: (config) => {
-    // config.plugins.delete("prefetch");
-    // config.plugins.delete("preload");
-    // // config.optimization.delete("splitChunks");
-    // config.output.libraryTarget("system");
-    // config.set("devtool", "sourcemap");
-  },
+  // chainWebpack: (config) => {
+  //   config.plugins.delete("prefetch");
+  //   config.plugins.delete("preload");
+  //   config.output.libraryTarget("umd");
+  //   config.externals(["vue", "vue-router", /^@olea\/.+/]);
+  // },
+
   transpileDependencies: ["vuetify"],
   configureWebpack: {
     // output: {
@@ -33,16 +33,15 @@ module.exports = {
     // output: {
     //   libraryTarget: "umd",
     // },
-    externals: [
-      /^@olea\/.+/,
-      // /^vuetify\/.*/,
-      "vue",
-      // {
-      //   vue: { commonjs: "vue", commonjs2: "vue", root: "Vue", amd: "vue" },
-      //   "vue-router": "vue-router",
-      //   vuex: "vuex",
-      // },
-    ],
+    // externals: [
+    //   // /^vuetify\/.*/,
+    //   "vue",
+    //   // {
+    //   //   vue: { commonjs: "vue", commonjs2: "vue", root: "Vue", amd: "vue" },
+    //   //   "vue-router": "vue-router",
+    //   //   vuex: "vuex",
+    //   // },
+    // ],
 
     // module: {
     //   rules: [{ parser: { System: false } }],

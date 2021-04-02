@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import vuetify from "./plugins/vuetify";
+// import vuetify from "./plugins/vuetify";
 import vueFovia from "./plugins/vue-fovia";
 
 console.log("Vue", Vue);
@@ -13,7 +13,7 @@ Vue.config.productionTip = false;
 // export default System.import("vue").then(() => {
 new Vue({
   router,
-  vuetify,
+  // vuetify,
   render: (h) => h(App),
 }).$mount("#app");
 // });

@@ -1,11 +1,9 @@
+const isLib = process.argv[4] === "lib";
+const externals = isLib ? ["vue"] : [];
+
 module.exports = {
   configureWebpack: {
-    devServer: {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    },
-    externals: ["vue-router", "vuex"],
+    externals,
     // output: {
     //   libraryTarget: "system",
     // },

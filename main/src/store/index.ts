@@ -5,17 +5,17 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    count: 0,
+    count: 0
   },
   mutations: {
     dummyMutation(state) {
       state.count = state.count + 1;
-    },
+    }
   },
   actions: {
     dummy({ commit }) {
       commit("dummyMutation");
-    },
+    }
   },
-  modules: {},
+  modules: {}
 });

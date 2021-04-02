@@ -19,7 +19,6 @@
           <v-tab to="/">Main</v-tab>
           <v-tab to="/apps/microApp1">Micro App 1</v-tab>
           <v-tab to="/apps/microApp2">Micro App 2</v-tab>
-          <v-tab to="/apps/mrperf">mrperf</v-tab>
         </v-tabs>
         <v-divider></v-divider>
         <v-btn color="success" @click="storeAction">GLOBAL ACTION!</v-btn>

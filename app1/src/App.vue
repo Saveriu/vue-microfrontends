@@ -1,36 +1,18 @@
 <template>
-  <main id="app1">
-    <h2>I'm micro-app1 with params: {{ artifactURIs }}</h2>
-    <button @click="cp++">CLICK {{ cp }}</button>
-    <app-1-component></app-1-component>
+  <main>
+    <h2>Simple APP</h2>
+    <button @click="cp++">A BUTTON</button>
+    <div>A DIV {{ cp }}</div>
   </main>
 </template>
 
 <script>
-import App1Component from "@/components/App1Component.vue";
-
 export default {
-  components: { App1Component },
   props: {
     artifactURIs: Array,
   },
   data: () => ({
     cp: 0,
   }),
-  async beforeCreate() {
-    console.debug("Loading micro-app1");
-    this.$store.registerModule("micro-app1", {
-      namespaced: true,
-      state: { count: 0 },
-      mutations: {
-        increment(state) {
-          state.count = state.count + 1;
-        },
-      },
-      action: {},
-    });
-  },
 };
 </script>
-
-<style scoped></style>

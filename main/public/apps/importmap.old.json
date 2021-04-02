@@ -1,5 +1,8 @@
 {
   "imports": {
+    "vue": "https://unpkg.com/vue",
+    "vue-router": "https://unpkg.com/vue-router",
+    "vuex": "https://unpkg.com/vuex",
     "@saveriu/microApp1": "//localhost:8080/apps/micro-app1.umd.js",
     "@saveriu/microApp2": "//localhost:8080/apps/micro-app2.umd.js"
   }

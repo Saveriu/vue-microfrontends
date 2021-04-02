@@ -7,7 +7,7 @@
     <v-card style="border: 2px dotted red">
       <component
         :is="microAppComponent"
-        :artifactURIs="artifactsURIs"
+        :storeId="microAppId"
         :key="microAppId"
       />
     </v-card>
@@ -16,17 +16,11 @@
 
 <script lang="js">
 
-
 export default {
   props: {
     microAppId: {
       type: String,
       required: true,
-    },
-    artifactsURIs: {
-      type: Array,
-      required: false,
-      default: () => [],
     },
   },
   data: () => ({
@@ -49,7 +43,7 @@ export default {
     console.log("Pull Application", this.microAppId)
       try {
         //eslint-disable-next-line
-        this.microAppComponent = await System.import(`@olea/${this.microAppId}`);
+        this.microAppComponent = await System.import(`@saveriu/${this.microAppId}`);
         // this.microAppComponent = await window.System.import(`@olea/${this.microAppId}`);
         console.log("App pulled!")
       }

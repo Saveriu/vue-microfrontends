@@ -5,11 +5,6 @@ import AppContainer from "@/views/AppContainer.vue";
 
 Vue.use(VueRouter);
 
-function getArtifactsURIs(jobId: string): string[] {
-  //load from store
-  return ["/artifacts/1234", "/artifacts/5678"];
-}
-
 const routes: Array<RouteConfig> = [
   {
     path: "/",
@@ -20,7 +15,6 @@ const routes: Array<RouteConfig> = [
     path: "/apps/:appId",
     name: "App",
     props: (route) => ({
-      artifactsURIs: getArtifactsURIs("titi"),
       microAppId: route.params.appId,
     }),
     component: AppContainer,

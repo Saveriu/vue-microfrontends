@@ -1,7 +1,8 @@
 <template>
   <v-card>
     <v-card-title>Main App</v-card-title>
-    global state: {{ globalState }}
+    global state:
+    {{ globalState }}
   </v-card>
 </template>
 
@@ -15,8 +16,6 @@ export default Vue.extend({
     globalState() {
       return this.$store.state;
     },
-
-    
   },
 });
 </script>

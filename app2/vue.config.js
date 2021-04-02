@@ -1,19 +1,10 @@
+const isLib = process.argv[4] === "lib";
+const externals = isLib ? ["vue", "vue-router", "vuex"] : [];
+
 module.exports = {
   transpileDependencies: ["vuetify"],
   configureWebpack: {
-    devServer: {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    },
-    externals: [
-      {
-        vue: { commonjs: "vue", commonjs2: "vue", root: "Vue", amd: "vue" },
-        "vue-router": "vue-router",
-        vuex: "vuex",
-      },
-      // /^vuetify\/.*/,
-    ],
+    externals,
     // output: {
     //   libraryTarget: "system",
     // },
@@ -23,3 +14,13 @@ module.exports = {
     extract: false,
   },
 };
+
+// externals: [
+// {
+//   vue: { commonjs: "vue", commonjs2: "vue", root: "Vue", amd: "vue" },
+//   "vue-router": "vue-router",
+//   vuex: "vuex",
+
+// },
+// /^vuetify\/.*/,
+// ],
